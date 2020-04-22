@@ -1,0 +1,29 @@
+
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+// Datatables bootstrap 4
+@import '~datatables.net-bs4/css/dataTables.bootstrap4.css';
+
+// Vuesax
+@import '~vuesax/dist/vuesax.css';
+
+// owl Carousel
+@import '~owl.carousel/dist/assets/owl.carousel.css';
+
+// Animate
+@import '~animate.css/animate.css';
+
+.navbar-laravel {
+  background-color: #8BC34A;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
