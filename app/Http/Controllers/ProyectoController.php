@@ -66,9 +66,7 @@ class ProyectoController extends Controller
         if ($request->hasFile('imagen')) {
             $imagen   = $request->file('imagen');
             $rutaImagen  = Storage::putFileAs(
-                'public/imagenes_proyectos',
-                $imagen,
-                $imagen->getClientOriginalName()
+                'public/imagenes_proyectos', $imagen, $imagen->getClientOriginalName()
             );
             $proyecto->imagen   = "imagenes_proyectos/{$imagen->getClientOriginalName()}";
         }
@@ -91,11 +89,12 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Proyecto $proyecto)
+    public function show($id)
     {
-        $proyecto->objetivosEspecificos = explode("-", $proyecto->objetivosEspecificos);
-        return view('proyectos.detalle', compact('proyecto'));
-        // return response()->json(compact('proyecto'));
+        // $proyecto = Proyecto::findOrFail();
+        //
+        // return view('proyectos.ver', compact('proyecto'));
+        return redirect()->back();
     }
 
     /**
@@ -133,9 +132,7 @@ class ProyectoController extends Controller
         if ($request->hasFile('imagen')) {
             $imagen   = $request->file('imagen');
             $rutaImagen  = Storage::putFileAs(
-                'public/imagenes_proyectos',
-                $imagen,
-                $imagen->getClientOriginalName()
+                'public/imagenes_proyectos', $imagen, $imagen->getClientOriginalName()
             );
             $proyecto->imagen   = "imagenes_proyectos/{$imagen->getClientOriginalName()}";
         }
@@ -190,18 +187,18 @@ class ProyectoController extends Controller
         foreach ($proyectos->where('estadoPublicacion', 'publicar') as $key => $proyecto) {
             $data['events'][$key] = [
                 "media" => [
-                    "url" => "/storage/{$proyecto->imagen}",
-                    "caption" => strtoupper($proyecto->lineaProgramatica),
-                    "credit" => "GRINDDA"
+                    "url"=> "/storage/{$proyecto->imagen}",
+                    "caption"=> strtoupper($proyecto->lineaProgramatica),
+                    "credit"=> "GRINDDA"
                 ],
                 "start_date" => [
                     "month" => date('m', strtotime($proyecto->fechaCreacion)),
                     "day" => date('d', strtotime($proyecto->fechaCreacion)),
                     "year" => date('Y', strtotime($proyecto->fechaCreacion))
                 ],
-                "text" => [
-                    "headline" => "$proyecto->nombre<br/>",
-                    "text" => "<p>$proyecto->objetivoGeneral</p>"
+                "text"=> [
+                    "headline"=> "$proyecto->nombre<br/>",
+                    "text"=> "<p>$proyecto->objetivoGeneral</p>"
                 ]
             ];
         }

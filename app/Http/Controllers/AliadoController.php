@@ -53,9 +53,7 @@ class AliadoController extends Controller
 
         $logo   = $request->file('logo');
         $rutaLogo  = Storage::putFileAs(
-            'public/logos_aliados',
-            $logo,
-            $logo->getClientOriginalName()
+            'public/logos_aliados', $logo, $logo->getClientOriginalName()
         );
 
         $aliado->nombre = $request->get('nombre');
@@ -71,10 +69,12 @@ class AliadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Aliado $aliado)
+    public function show($id)
     {
-        //return response()->json(compact('aliado'));
-        return view('aliados.detalle', compact('aliado'));
+        // $aliado = Aliado::findOrFail($id);
+        //
+        // return view('aliados.ver', compact('aliado'));
+        return redirect()->back();
     }
 
     /**
@@ -104,9 +104,7 @@ class AliadoController extends Controller
         if ($request->hasFile('logo')) {
             $logo   = $request->file('logo');
             $rutaLogo  = Storage::putFileAs(
-                'public/logos_aliados',
-                $logo,
-                $logo->getClientOriginalName()
+                'public/logos_aliados', $logo, $logo->getClientOriginalName()
             );
             $aliado->logo   = "logos_aliados/{$logo->getClientOriginalName()}";
         }

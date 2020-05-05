@@ -61,9 +61,7 @@ class UserController extends Controller
         if ($request->hasFile('foto')) {
             $foto       = $request->file('foto');
             $rutaFoto   = Storage::putFileAs(
-                'public/fotos_usuarios',
-                $foto,
-                $foto->getClientOriginalName()
+                'public/fotos_usuarios', $foto, $foto->getClientOriginalName()
             );
 
             $usuario->foto = "fotos_usuarios/{$foto->getClientOriginalName()}";
@@ -86,8 +84,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $usuario = User::findOrFail($id);
-        return view('usuarios.detalle', compact('usuario'));
+        // $usuario = User::findOrFail($id);
+        //
+        // return view('usuarios.ver', compact('usuario'));
+        return redirect()->back();
     }
 
     /**
@@ -124,9 +124,7 @@ class UserController extends Controller
         if ($request->hasFile('foto')) {
             $foto       = $request->file('foto');
             $rutaFoto   = Storage::putFileAs(
-                'public/fotos_usuarios',
-                $foto,
-                $foto->getClientOriginalName()
+                'public/fotos_usuarios', $foto, $foto->getClientOriginalName()
             );
 
             $usuario->foto = "fotos_usuarios/{$foto->getClientOriginalName()}";

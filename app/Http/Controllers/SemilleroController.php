@@ -56,9 +56,7 @@ class SemilleroController extends Controller
 
         $imagen   = $request->file('imagen');
         $rutaImagen  = Storage::putFileAs(
-            'public/logos_semilleros',
-            $imagen,
-            $imagen->getClientOriginalName()
+            'public/logos_semilleros', $imagen, $imagen->getClientOriginalName()
         );
 
         $semillero->imagen                  = "logos_semilleros/{$imagen->getClientOriginalName()}";
@@ -82,9 +80,10 @@ class SemilleroController extends Controller
      */
     public function show($id)
     {
-        $semillero = Semillero::findOrFail($id);
-
-        return view('semilleros.detalle', compact('semillero'));
+        // $semillero = Semillero::findOrFail($id);
+        //
+        // return view('semilleros.ver', compact('semillero'));
+        return redirect()->back();
     }
 
     /**
@@ -96,6 +95,7 @@ class SemilleroController extends Controller
     public function edit($id)
     {
         $semillero = Semillero::findOrFail($id);
+
         return view('semilleros.editar', compact('semillero'));
     }
 
@@ -116,9 +116,7 @@ class SemilleroController extends Controller
         if ($request->hasFile('imagen')) {
             $imagen   = $request->file('imagen');
             $rutaImagen  = Storage::putFileAs(
-                'public/logos_semilleros',
-                $imagen,
-                $imagen->getClientOriginalName()
+                'public/logos_semilleros', $imagen, $imagen->getClientOriginalName()
             );
             $semillero->imagen                  = "logos_semilleros/{$imagen->getClientOriginalName()}";
         }

@@ -13,7 +13,9 @@
 
     <title>{{ config('app.name', 'GRINDDA') }}</title>
 
-    
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/custom.js') }}" defer></script>
     <!-- 2 -->
      @stack('scripts')
 
@@ -203,8 +205,5 @@
             </div>
         </div>
     </footer>
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/custom.js') }}" defer></script>
 </body>
 </html>

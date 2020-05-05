@@ -18,10 +18,10 @@ class PublicacionController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct()
-    {
-        $this->middleware('auth')->except('descargar');
-    }
+     public function __construct()
+     {
+         $this->middleware('auth')->except('descargar');
+     }
 
 
     public function index()
@@ -57,9 +57,7 @@ class PublicacionController extends Controller
         if ($request->hasFile('portada')) {
             $portada     = $request->file('portada');
             $rutaPortada = Storage::putFileAs(
-                'public/publicaciones',
-                $portada,
-                $portada->getClientOriginalName()
+                'public/publicaciones', $portada, $portada->getClientOriginalName()
             );
 
             $publicacion->portada = "publicaciones/{$portada->getClientOriginalName()}";
@@ -68,9 +66,7 @@ class PublicacionController extends Controller
         if ($request->hasFile('archivo')) {
             $archivo       = $request->file('archivo');
             $rutaArchivo   = Storage::putFileAs(
-                'public/publicaciones',
-                $archivo,
-                $archivo->getClientOriginalName()
+                'public/publicaciones', $archivo, $archivo->getClientOriginalName()
             );
 
             $publicacion->archivo = "publicaciones/{$archivo->getClientOriginalName()}";
@@ -87,10 +83,9 @@ class PublicacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Publicacion $publicacion)
+    public function show($id)
     {
-        return view('publicaciones.detalle', compact('publicacion'));
-        return response()->json(compact('publicacion'));
+        return redirect()->back();
     }
 
     /**
@@ -125,9 +120,7 @@ class PublicacionController extends Controller
             $portada     = $request->file('portada');
 
             $rutaPortada = Storage::putFileAs(
-                'public/publicaciones',
-                $portada,
-                $portada->getClientOriginalName()
+                'public/publicaciones', $portada, $portada->getClientOriginalName()
             );
 
             $publicacion->portada = "publicaciones/{$portada->getClientOriginalName()}";
@@ -137,9 +130,7 @@ class PublicacionController extends Controller
             $archivo       = $request->file('archivo');
             Storage::delete($publicacion->archivo);
             $rutaArchivo   = Storage::putFileAs(
-                'public/publicaciones',
-                $archivo,
-                $archivo->getClientOriginalName()
+                'public/publicaciones', $archivo, $archivo->getClientOriginalName()
             );
 
             $publicacion->archivo = "publicaciones/{$archivo->getClientOriginalName()}";
@@ -157,6 +148,7 @@ class PublicacionController extends Controller
      */
     public function destroy($id)
     {
+
     }
 
     public function descargar($id)
@@ -166,8 +158,8 @@ class PublicacionController extends Controller
         $pathToFile     = storage_path("app/public/{$publicacion->archivo}");
         if (file_exists($pathToFile)) {
 
-            $extension      = '.' . pathinfo($pathToFile)['extension'];
-            $nombreArchivo  = $publicacion->nombre . $extension;
+            $extension      = '.'.pathinfo($pathToFile)['extension'];
+            $nombreArchivo  = $publicacion->nombre.$extension;
 
             return response()->download($pathToFile, $nombreArchivo);
         }

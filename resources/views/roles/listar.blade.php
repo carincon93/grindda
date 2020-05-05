@@ -27,20 +27,21 @@
                                     <a class="btn-circle" href="{{ route('roles.edit', $rol->id) }}"><i class="fas fa-fw fa-pencil-alt"></i></a>
                                 @endcan
                                 @can ('eliminar-rol')
-                                <div class="dropdown btn-circle">
-                                    <div class="" id="dropdownEliminar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-fw fa-trash"></i>
-                                    </div>
+                                    <div class="dropdown btn-circle">
+                                        <div class="" id="dropdownEliminar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-fw fa-trash"></i>
+                                        </div>
 
-                                    <div class="dropdown-menu" aria-labelledby="dropdownEliminar">
-                                        <p class="text-muted pl-1 pr-1 mt-2 mb-1 text-center mensaje-eliminar">¿Desea eliminar este rol?</p>
-                                        <form action="{{ route('roles.destroy', $rol->id) }}" method="POST" class="d-block form-destroy dropdown-item">
-                                            @method('delete')
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger d-block w-100">Confirmar</button>
-                                        </form>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownEliminar">
+                                            <p class="text-muted pl-1 pr-1 mt-2 mb-1 text-center mensaje-eliminar">¿Desea eliminar este rol?</p>
+                                            <form action="{{ route('roles.destroy', $rol->id) }}" method="POST" class="d-block form-destroy dropdown-item">
+                                                @method('delete')
+                                                @csrf
+
+                                                <button type="submit" class="btn btn-danger d-block w-100">Confirmar</button>
+                                            </form>
+                                        </div>
                                     </div>
-                                </div>
                                 @endcan
                             </td>
                         </tr>

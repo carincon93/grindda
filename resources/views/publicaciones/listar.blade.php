@@ -39,6 +39,7 @@
                                             <form action="{{ route('publicaciones.destroy', $publicacion->id) }}" method="POST" class="d-block form-destroy dropdown-item">
                                                 @method('delete')
                                                 @csrf
+
                                                 <button type="submit" class="btn btn-danger d-block w-100">Confirmar</button>
                                             </form>
                                         </div>

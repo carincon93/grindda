@@ -1,11 +1,10 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip('show');
     $('.material-icons').addClass('fas fa-angle-down').text('');
 
-    $('.show-more').click(function () {
+    $('.show-more').click(function() {
         $('.logros').toggleClass('mostrar-mas');
     });
-
 
     $('.fecha').each(function (index, dateElem) {
         let $dateElem = $(dateElem);
@@ -14,8 +13,8 @@ $(document).ready(function () {
     });
 
     $('.substring').each(function (index, pru) {
-        let $mes = $(pru);
-        let formatted = moment($mes.text(), 'YYYY-MM-DD').locale('es').format('MMMM YYYY');
+        let $mes        = $(pru);
+        let formatted   = moment($mes.text(), 'YYYY-MM-DD').locale('es').format('MMMM YYYY');
         $mes.text(formatted);
     });
 
@@ -47,7 +46,7 @@ $(document).ready(function () {
     carouselJumbotron.owlCarousel({
         items: 1,
         loop: true,
-        responsiveClass: true,
+        responsiveClass:true,
         autoplay: false,
         autoplayHoverPause: true,
         nav: false,
@@ -56,11 +55,6 @@ $(document).ready(function () {
         mouseDrag: false,
     });
 
-
-
-
-
-
     $('.carousel-investigadores').owlCarousel({
         center: true,
         items: 5,
@@ -68,19 +62,19 @@ $(document).ready(function () {
         margin: 10,
         // autoplay: true,
         autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
+        responsive:{
+            0:{
+                items:1,
+                nav:false
             },
-            600: {
-                items: 3,
-                nav: false
+            600:{
+                items:3,
+                nav:false
             },
-            1000: {
-                items: 5,
-                nav: false,
-                loop: true
+            1000:{
+                items:5,
+                nav:false,
+                loop:true
             }
         }
     });
@@ -118,6 +112,3 @@ observer = new IntersectionObserver(entries => {
 itemAnimated.forEach(item => {
     observer.observe(item);
 });
-
-
-

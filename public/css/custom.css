@@ -163,6 +163,9 @@ section.m-250 {
   border-top: 1px solid #F0F0F0;
   font-weight: bold;
 }
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
 
 /* ==========================================================================
 Página principal

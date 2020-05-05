@@ -89,10 +89,10 @@ class GrupoInvestigacionController extends Controller
      */
     public function edit($id)
     {
-        // $grupoInvestigacion = GrupoInvestigacion::findOrFail($id);
-        //
-        // return view('grupos_investigacion.editar', compact('grupoInvestigacion'));
-        return redirect()->back();
+        $grupoInvestigacion = GrupoInvestigacion::findOrFail($id);
+        
+        return view('grupos_investigacion.editar', compact('grupoInvestigacion'));
+        // return redirect()->back();
     }
 
     /**

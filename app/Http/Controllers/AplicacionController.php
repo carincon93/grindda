@@ -63,9 +63,9 @@ class AplicacionController extends Controller
      */
     public function show($id)
     {
-        // $aplicacion = Aplicacion::findOrFail($id);
-        //
-        // return view('aplicaciones.ver', compact('aplicacion'));
+        $aplicacion = Aplicacion::findOrFail($id);
+        
+        return view('aplicaciones.ver', compact('aplicacion'));
         return redirect()->back();
     }
 

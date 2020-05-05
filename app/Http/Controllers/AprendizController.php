@@ -86,10 +86,10 @@ class AprendizController extends Controller
      */
     public function show($id)
     {
-        // $aprendiz = Aprendiz::findOrFail($id);
-        //
-        // return view('aprendices.ver', compact('aprendiz'));
-        return redirect()->back();
+        $aprendiz = Aprendiz::findOrFail($id);
+        
+        return view('aprendices.ver', compact('aprendiz'));
+      
     }
 
     /**

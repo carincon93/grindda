@@ -70,10 +70,12 @@ class RolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Rol $rol)
+    public function show($id)
     {
-        return view('roles.detalle', compact('rol'));
-        return response()->json(compact('rol'));
+        // $rol = Rol::findOrFail($id);
+        //
+        // return view('roles.ver', 'rol');
+        return redirect()->back();
     }
 
     /**
@@ -103,6 +105,7 @@ class RolController extends Controller
         $truesPermisos      = array_pad($truesPermisos, count($permisos), true);
         $permisos           = array_combine($permisos, $truesPermisos);
         json_encode($permisos);
+
         $rol = Rol::findOrFail($id);
         $rol->nombre      = $request->get('nombre');
         $rol->slug        = str_slug($request->get('nombre'));

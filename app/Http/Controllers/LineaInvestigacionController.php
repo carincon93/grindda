@@ -78,10 +78,10 @@ class LineaInvestigacionController extends Controller
      */
     public function show($id)
     {
-        // $lineaInvestigacion = LineaInvestigacion::findOrFail($id);
-        //
-        // return view('lineas_investigacion.ver', compact('lineaInvestigacion'));
-        return redirect()->back();
+        $lineaInvestigacion = LineaInvestigacion::findOrFail($id);
+        
+        return view('lineas_investigacion.ver', compact('lineaInvestigacion'));
+        // return redirect()->back();
     }
 
     /**

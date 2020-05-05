@@ -95,10 +95,10 @@ class EventoController extends Controller
      */
     public function show($id)
     {
-        // $evento = Evento::findOrFail($id);
-        //
-        // return view('eventos.ver', compact('evento'));
-        return redirect()->back();
+        $evento = Evento::findOrFail($id);
+        
+        return view('eventos.ver', compact('evento'));
+    
     }
 
     /**
