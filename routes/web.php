@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+
 Auth::routes();
 
 Route::get('/panel', function () {
@@ -29,9 +31,9 @@ Route::get('/semillero/{nombreSemillero}', 'PaginaController@detallesSemillero')
 Route::get('/semilleros', 'PaginaController@semilleros')->name('semilleros');
 Route::get('/eventos/{ano}', 'PaginaController@eventos')->name('eventos');
 Route::get('/proyectos', 'PaginaController@proyectos')->name('proyectos');
-// Route::get('/publicaciones', 'PaginaController@publicaciones')->name('publicaciones');
-Route::get('/publicaciones/{tipo_publicacion}', 'PaginaController@publicaciones')->name('publicaciones');
-Route::get('/publicacion/{id}/descargar', 'PublicacionController@descargar')->name('publicaciones.descargar');
+Route::get('/publicaciones', 'PaginaController@publicaciones')->name('publicaciones');
+//Route::get('/publicaciones/{tipo_publicacion}', 'PaginaController@publicaciones')->name('publicaciones');
+//Route::get('/publicacion/{id}/descargar', 'PublicacionController@descargar')->name('publicaciones.descargar');
 
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -144,6 +144,44 @@ $(document).ready(function () {
     navSpeed: 3000,
     mouseDrag: false
   });
+  $('.owl-equipo').owlCarousel({
+    center: true,
+    loop: true,
+    margin: 10,
+    nav: true,
+    navText: "<>",
+    autoplay: true,
+    autoplayTimeout: 5000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      2000: {
+        items: 3
+      },
+      3000: {
+        items: 5
+      }
+    }
+  });
+  $('.owl-semillero').owlCarousel({
+    center: true,
+    loop: true,
+    margin: 10,
+    nav: true,
+    navText: "<>",
+    responsive: {
+      0: {
+        items: 1
+      },
+      1000: {
+        items: 3
+      },
+      3000: {
+        items: 5
+      }
+    }
+  });
   $('.carousel-investigadores').owlCarousel({
     center: true,
     items: 5,
@@ -200,7 +238,7 @@ itemAnimated.forEach(function (item) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/grindda-2020/resources/js/custom.js */"./resources/js/custom.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/sennova/grindda/resources/js/custom.js */"./resources/js/custom.js");
 
 
 /***/ })

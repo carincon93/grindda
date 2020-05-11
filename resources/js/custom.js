@@ -57,7 +57,45 @@ $(document).ready(function () {
     });
 
 
+    $('.owl-equipo').owlCarousel({
+        center:true,
+        loop:true,
+        margin:10,
+        nav:true,
+        navText:"<>",
+        autoplay:true,
+        autoplayTimeout:5000,
+        responsive:{
+            0:{
+                items:1
+            },
+            2000:{
+                items:3
+            },
+            3000:{
+                items:5
+            }
+        }
+    });
 
+    $('.owl-semillero').owlCarousel({
+        center:true,
+        loop:true,
+        margin:10,
+        nav:true,
+        navText:"<>",
+        responsive:{
+            0:{
+                items:1
+            },
+            1000:{
+                items:3
+            },
+            3000:{
+                items:5
+            }
+        }
+    });
 
 
 
