@@ -61,9 +61,9 @@ class PaginaController extends Controller
     {
         $semillero = Semillero::where('nombre', str_replace('-', ' ', $nombreSemillero))->firstOrFail();
 
-        dd($semillero);
+        // dd($semillero);
 
-        // return view('pagina.semilleros.ver', compact('semillero'));
+        return view('pagina.semilleros.ver', compact('semillero'));
     }
 
     public function eventos($ano)

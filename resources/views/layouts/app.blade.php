@@ -62,7 +62,7 @@
                                 <a class="dropdown-item" href="{{ route('quienes_somos.lineas_investigacion') }}">Líneas de investigación</a>
                             </div>
                         </li>
-                        <li class="nav-item {{ Request::is('semilleros*') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('semilleros') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('semilleros') }}">Semilleros</a>
                         </li>
                         <li class="nav-item dropdown">

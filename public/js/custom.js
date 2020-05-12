@@ -200,7 +200,7 @@ itemAnimated.forEach(function (item) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\grindda\resources\js\custom.js */"./resources/js/custom.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\grindda-2020\resources\js\custom.js */"./resources/js/custom.js");
 
 
 /***/ })
