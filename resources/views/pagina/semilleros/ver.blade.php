@@ -4,9 +4,9 @@
 </div>
 <div class="container align-self-center semillero mx-auto">
 
-    <section>
+    <section class="fondo-cuadros">
         <div class="logo-text">
-                <img src="http://placehold.it/400x102" class="logo-semillero" alt="">
+            <di class="logo-semillero"></di>
             <p class="descripcion mx-auto">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Quam, ab corporis Lorem ipsum dolor sit amet consectetur
@@ -20,8 +20,6 @@
         </div>
     </section>
     <section>
-
-
         <div class="row">
             <div class="col-4 username-team">
                 <h1>Aparicio</h1>
@@ -33,8 +31,6 @@
                 <h1>Jaramillo</h1>
             </div>
         </div>
-
-
         <div class="row">
             <p class="descripcion mx-auto mt-5">Lorem ipsum, dolor sit amet
                 consectetur adipisicing elit. Iusto ratione placeat,
@@ -87,27 +83,87 @@
             </div>
         </div>
 
-            <div class="talleres">
-                <h1 class="title-taller mx-auto">
-                    Talleres
-                </h1>
-                <div class="taller-desc row">
-                    <div class="img col-1">
-                        <img src="http://placehold.it/100x100" alt="">
-                        
-                    </div>
-                    <div class="col">
-                        <h1 class="title title-taller-desc">12 de junio</h1>
-                        <p class="descripcion-taller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum sint
-                            illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
-                            Repellendus
-                            facilis dolores nulla rem similique non sint mollitia minima? Recusandae non asperiores
-                            voluptatibus
-                            tenetur quas animi! Nulla ullam eveniet iure placeat nobis provident, exercitationem enim
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nisi inventore cupiditate excepturi nemo quos temporibus perspiciatis. Numquam, ex commodi. Temporibus sed vero aut odio porro soluta placeat dolor. Nisi.
+        <div class="talleres">
+            <h1 class="title-taller mx-auto">
+                Talleres
+            </h1>
+        </div>
+        <div class="row taller-desc">
+            <div class="imgs col-2">
+                <div class="img-taller">
+                    <div class="img-taller2">
+                        <div class="img-calendar">
+
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
+            <div class="contenido-taller col-10">
+                <h1 class="title title-taller-desc">7 de Julio</h1>
+                <p class="descripcion-taller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                    sint
+                    illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    Repellendus
+                    facilis dolores nulla rem similique non sint mollitia minima? Recusandae non asperiores
+                    voluptatibus
+                </p>
+            </div>
+        </div>
+        <div class="row taller-desc">
+            <div class="imgs col-2">
+                <div class="img-taller">
+                    <div class="img-taller2">
+                        <div class="img-calendar">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenido-taller col-10">
+                <h1 class="title title-taller-desc">7 de Julio</h1>
+                <p class="descripcion-taller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                    sint
+                    illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    Repellendus
+                    facilis dolores nulla rem similique non sint mollitia minima? Recusandae non asperiores
+                    voluptatibus
+                </p>
+            </div>
+        </div>
+        <div class="row taller-desc">
+            <div class="imgs col-2">
+                <div class="img-taller">
+                    <div class="img-taller2">
+                        <div class="img-calendar">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenido-taller col-10">
+                <h1 class="title title-taller-desc">7 de Julio</h1>
+                <p class="descripcion-taller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                    sint
+                    illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    Repellendus
+                    facilis dolores nulla rem similique non sint mollitia minima? Recusandae non asperiores
+                    voluptatibus
+                </p>
+            </div>
+        </div>
     </section>
+
+    <!-- Trazados -->
 </div>
+        <div class="first-line">
+
+        </div>
+        <div class="second-line">
+
+            <div class="third-line-green">
+                
+            </div>
+        </div>
+        <div class="sombra">
+            
+        </div>
