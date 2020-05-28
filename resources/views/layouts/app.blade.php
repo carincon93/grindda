@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="application-name" content="Matriz de fitotectura">
     <meta name="author" content="GRINDDA">
@@ -14,7 +14,7 @@
 
     <title>{{ config('app.name', 'GRINDDA') }}</title>
 
-    
+
     <!-- 2 -->
      @stack('scripts')
 
@@ -32,58 +32,78 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <!-- 1 -->
-    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white">
-    @stack('header')
+<body class="bg-white {{ Request::is('/') ? 'home' : '' }}">
     <div id="app" class="mh-vh">
-        <nav class="navbar navbar-expand-md navbar-dark p-3">
-            <div class="container w-50 ">
-                    <a class="navbar-brand mr-5" href="{{ url('/') }}">
-                        <img src="{{asset('images/home/logo.png')}}" alt="">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <nav class="navbar navbar-expand-md p-3 w-75 m-auto">
+            <div class="container">
+                <a class="navbar-brand mr-5" href="{{ url('/') }}">
+                    <img src="{{asset('images/home/logo.png')}}" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto text-danger">
-                            <li class="nav-item {{ Request::is('proyectos*') ? 'active' : '' }}">
-                                <a class="nav-link" href="#">Proyectos</a>
-                            </li>
-                            <li class="nav-item {{ Request::is('publicaciones*') ? 'active' : '' }}">
-                                <a class="nav-link" href="#">Publicaciones</a>
-                            </li>
-                            <li class="nav-item {{ Request::is('eventos*') ? 'active' : '' }}">
-                                <a class="nav-link" href="#">Eventos</a>
-                            </li>
-                            <li class="nav-item {{ Request::is('equipo*') ? 'active' : '' }}">
-                                <a class="nav-link" href="#">Equipo</a>
-                            </li>
-                            <li class="nav-item mt-1 {{ Request::is('eventos*') ? 'active' : '' }}">
-                                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li class="nav-item mt-1 {{ Request::is('eventos*') ? 'active' : '' }}">
-                                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li class="nav-item mt-1 {{ Request::is('eventos*') ? 'active' : '' }}">
-                                <a class="nav-link" href="#"><i class="fab fa-flickr"></i></a>
-                            </li>
-                            <li class="nav-item mt-1 {{ Request::is('eventos*') ? 'active' : '' }}">
-                                <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
+                <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item {{ Request::is('proyectos*') ? 'active' : '' }}">
+                            <a class="nav-link" href="#">Proyectos</a>
+                        </li>
+                        <li class="nav-item {{ Request::is('publicaciones*') ? 'active' : '' }}">
+                            <a class="nav-link" href="#">Publicaciones</a>
+                        </li>
+                        <li class="nav-item {{ Request::is('eventos*') ? 'active' : '' }}">
+                            <a class="nav-link" href="#">Eventos</a>
+                        </li>
+                        <li class="nav-item {{ Request::is('equipo*') ? 'active' : '' }}">
+                            <a class="nav-link" href="#">Equipo</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav social-network">
+                        <li class="nav-item mt-1">
+                            <a class="nav-link facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item mt-1">
+                            <a class="nav-link twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item mt-1">
+                            <a class="nav-link flickr" href="#" target="_blank"><i class="fab fa-flickr"></i></a>
+                        </li>
+                        <li class="nav-item mt-1">
+                            <a class="nav-link instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="pt-pagina">
+        <main>
             @yield('content')
         </main>
     </div>
-    <footer >
+    <footer>
+        <div class="container">
+            <div class="d-flex">
+                <figure>
+                    <img src="/images/home/logo.png">
+                </figure>
+                <ul class="list-group list-group-horizontal social-network">
+                    <li class="list-inline">
+                        <a class="facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline">
+                        <a class="twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline">
+                        <a class="flickr" href="#" target="_blank"><i class="fab fa-flickr"></i></a>
+                    </li>
+                    <li class="list-inline">
+                        <a class="instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </footer>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

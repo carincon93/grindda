@@ -114,7 +114,7 @@ timeline = new TL.Timeline('timeline-embed', '/storage/timeline/proyectos.json',
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/sennova/grindda/resources/js/timeline-init.js */"./resources/js/timeline-init.js");
+module.exports = __webpack_require__(/*! C:\Users\Cristian\DevProjects\grindda\resources\js\timeline-init.js */"./resources/js/timeline-init.js");
 
 
 /***/ })

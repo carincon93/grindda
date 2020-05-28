@@ -132,17 +132,20 @@ $(document).ready(function () {
       "sInfoEmpty": "Mostrando <strong>0 a 0</strong> de 0 registros"
     }
   });
-  var carouselJumbotron = $('.carousel-jumbotron');
-  carouselJumbotron.owlCarousel({
-    items: 1,
+  $('.owl-header').owlCarousel({
+    center: true,
     loop: true,
-    responsiveClass: true,
-    autoplay: false,
-    autoplayHoverPause: true,
-    nav: false,
-    navText: ["<i class='fa-fw fa fa-chevron-left'></i>", "<strong>Siguiente</strong> <i class='fa-fw fa fa-chevron-right'></i>"],
-    navSpeed: 3000,
-    mouseDrag: false
+    margin: 10,
+    nav: true,
+    navText: "<>",
+    autoplay: true,
+    autoplayTimeout: 10000,
+    mouseDrag: false,
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
   });
   $('.owl-equipo').owlCarousel({
     center: true,
@@ -150,8 +153,8 @@ $(document).ready(function () {
     margin: 10,
     nav: true,
     navText: "<>",
-    autoplay: true,
-    autoplayTimeout: 5000,
+    autoplay: false,
+    autoplayTimeout: 10000,
     responsive: {
       0: {
         items: 1
@@ -204,14 +207,7 @@ $(document).ready(function () {
         loop: true
       }
     }
-  }); // $('.carousel-investigadores').on('translate.owl.carousel', function(e){
-  //     idx = e.item.index;
-  //     $('.owl-item.big').removeClass('big');
-  //     $('.owl-item.medium').removeClass('medium');
-  //     $('.owl-item').eq(idx).addClass('big');
-  //     $('.owl-item').eq(idx-1).addClass('medium');
-  //     $('.owl-item').eq(idx+1).addClass('medium');
-  // });
+  });
 });
 var itemAnimated = document.querySelectorAll('.animated');
 observer = new IntersectionObserver(function (entries) {
@@ -238,7 +234,7 @@ itemAnimated.forEach(function (item) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/sennova/grindda/resources/js/custom.js */"./resources/js/custom.js");
+module.exports = __webpack_require__(/*! C:\Users\Cristian\DevProjects\grindda\resources\js\custom.js */"./resources/js/custom.js");
 
 
 /***/ })

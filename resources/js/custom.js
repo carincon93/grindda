@@ -6,7 +6,6 @@ $(document).ready(function () {
         $('.logros').toggleClass('mostrar-mas');
     });
 
-
     $('.fecha').each(function (index, dateElem) {
         let $dateElem = $(dateElem);
         let formatted = moment($dateElem.text(), 'YYYY-MM-DD').locale('es').format('LL');
@@ -43,17 +42,20 @@ $(document).ready(function () {
         }
     });
 
-    var carouselJumbotron = $('.carousel-jumbotron');
-    carouselJumbotron.owlCarousel({
-        items: 1,
-        loop: true,
-        responsiveClass: true,
-        autoplay: false,
-        autoplayHoverPause: true,
-        nav: false,
-        navText: ["<i class='fa-fw fa fa-chevron-left'></i>", "<strong>Siguiente</strong> <i class='fa-fw fa fa-chevron-right'></i>"],
-        navSpeed: 3000,
+    $('.owl-header').owlCarousel({
+        center:true,
+        loop:true,
+        margin:10,
+        nav:true,
+        navText:"<>",
+        autoplay:true,
+        autoplayTimeout: 10000,
         mouseDrag: false,
+        responsive:{
+            0:{
+                items:1
+            }
+        }
     });
 
 
@@ -63,8 +65,8 @@ $(document).ready(function () {
         margin:10,
         nav:true,
         navText:"<>",
-        autoplay:true,
-        autoplayTimeout:5000,
+        autoplay:false,
+        autoplayTimeout:10000,
         responsive:{
             0:{
                 items:1
@@ -97,8 +99,6 @@ $(document).ready(function () {
         }
     });
 
-
-
     $('.carousel-investigadores').owlCarousel({
         center: true,
         items: 5,
@@ -122,16 +122,6 @@ $(document).ready(function () {
             }
         }
     });
-
-    // $('.carousel-investigadores').on('translate.owl.carousel', function(e){
-    //     idx = e.item.index;
-    //     $('.owl-item.big').removeClass('big');
-    //     $('.owl-item.medium').removeClass('medium');
-    //     $('.owl-item').eq(idx).addClass('big');
-    //     $('.owl-item').eq(idx-1).addClass('medium');
-    //     $('.owl-item').eq(idx+1).addClass('medium');
-    // });
-
 });
 
 const itemAnimated = document.querySelectorAll('.animated');
