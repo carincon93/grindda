@@ -66,6 +66,12 @@ class PaginaController extends Controller
         return view('pagina.semilleros.ver', compact('semillero'));
     }
 
+    public function aplicaciones(){
+        $aplicaciones = Aplicacion::orderBy('nombre')->get();
+
+        return view('pagina.aplicaciones.listar', compact('aplicaciones'));
+    }
+
     public function eventos($ano)
     {
         $eventos = Evento::whereRaw("YEAR(eventos.fechaFin) = {$ano}")->get();
@@ -153,5 +159,11 @@ class PaginaController extends Controller
         // $fondo->save();
 
         return redirect()->route('fondos.index');
+    }
+    public function contacto(){
+        return view('pagina.contacto.contacto');
+    }
+    public function blog(){
+        return view('pagina.blog.blog');
     }
 }

@@ -69,6 +69,8 @@ class SemilleroController extends Controller
         $semillero->logros                  = $request->get('logros');
         $semillero->save();
 
+        
+
         return redirect()->route('semilleros.index');
     }
 

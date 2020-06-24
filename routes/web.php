@@ -17,6 +17,7 @@ Route::get('/panel', function () {
     return redirect('panel/usuarios');
 });
 
+
 Route::get('/', 'PaginaController@index');
 Route::get('/informacion-general', 'PaginaController@informacionGeneral')->name('quienes_somos.informacion_general');
 Route::get('/integrantes', 'PaginaController@integrantes')->name('quienes_somos.integrantes');
@@ -33,9 +34,13 @@ Route::get('/proyectos', 'PaginaController@proyectos')->name('proyectos');
 Route::get('/publicaciones/{tipo_publicacion}', 'PaginaController@publicaciones')->name('publicaciones');
 Route::get('/publicacion/{id}/descargar', 'PublicacionController@descargar')->name('publicaciones.descargar');
 
+Route::get('/aplicaciones,', 'PaginaController@aplicaciones')->name('aplicaciones');
+Route::get('blog', 'PaginaController@blog')->name('blog');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/obtener_autores', 'UserController@obtenerAutores');
+
+Route::get('/contacto', 'PaginaController@contacto')->name('contacto');
 
 Route::prefix('panel')->group(function () {
     Route::resource('/usuarios', 'UserController')->parameters([

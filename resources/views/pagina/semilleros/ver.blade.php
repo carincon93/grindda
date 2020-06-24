@@ -1,23 +1,54 @@
 @extends('layouts.app')
 <div class="semillero-bg-header">
-    <h1 class="title title-semillero">Semillero Amarillo</h1>
-</div>
-<div class="container align-self-center semillero mx-auto">
-
-    <section class="fondo-cuadros">
-        <div class="logo-text">
-            <di class="logo-semillero"></di>
-            <p class="descripcion mx-auto">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Quam, ab corporis Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Dolorem vitae molestiae nisi amet. Debitis
-                nobis labore sapiente ea corporis quis suscipit fugiat quo,
-                sunt, ut reprehenderit ab est eveniet atque. aspernatur
-                reprehenderit obcaecati earum possimus, animi temporibus
-                assumenda rem ex, quisquam dolore maxime non autem ducimus.
-                Vel, enim alias!
-            </p>
+    <div class="row semillero-container container">
+        <div class="col-4">
+            <img src="{{Storage::url('semilleros/chica-amarillo.png')}}" class="chica" alt="">
         </div>
+        <div class="col mt-5">
+            <h1 class="text-white text-right title-semillero-color">¿Quieres diseñar y construir <br>prototipos insdustriales?</h1>
+        </div>
+    </div>
+    <div class="inscripciones-semillero-detalle">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-left text-white m-5">Inscripciones abiertas</h2>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-semillero">Inscripcion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container align-self-center semillero mx-auto">
+<section class="fondo-cuadros">
+        <div class="row">
+            <div class="col">
+                <div class="join-images">
+                    <img src="{{Storage::url('semilleros/group.jpg')}}" class="img-group-semillero2" alt="">
+                    <img src="{{Storage::url('semilleros/group2.jpg')}}" class="img-group-semillero1" alt="">
+                    <img src="{{Storage::url('semilleros/rectangulo.png')}}" class="rectangle-img" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div class="logo-text">
+                    <div class="logo-semillero"></div>
+                    <p class="descripcion mx-auto">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Quam, ab corporis Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Dolorem vitae molestiae nisi amet. Debitis
+                        nobis labore sapiente ea corporis quis suscipit fugiat quo,
+                        sunt, ut reprehenderit ab est eveniet atque. aspernatur
+                        reprehenderit obcaecati earum possimus, animi temporibus
+                        assumenda rem ex, quisquam dolore maxime non autem ducimus.
+                        Vel, enim alias!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
     </section>
     <section>
         <div class="row">
@@ -40,122 +71,170 @@
             </p>
         </div>
         <a href="" class="btn btn-semillero">VerCvLac</a>
-        <div class="row group-team">
-
-            <div class="circle-foto rounded-circle mx-auto">
-                <img class="img-team" src="/images/Enmascarar_grupo_9.png" alt="">
-                <p>Lorem, ipsum dolor.</p>
-
+        <div class="group-team align-self-center mx-auot">
+            <div class="row d-flex justify-content-center">
+                    <h1 class=""> Aprendices </h1>
             </div>
-            <!-- Desc -->
-            <div class="circle-foto rounded-circle mx-auto">
-                <img class="img-team" src="/images/Enmascarar_grupo_9.png" alt="">
-                <p>Lorem, ipsum dolor.</p>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <h4>Cristian Camilo Vazques</h4>
+                    <p>Ingeniero de Sistemas <br> y Telecominicaciones</p>
+                </div>
+                <div class="col">
+                    <h4>Sebastian Corrales</h4>
+                    <p>Tecnologo en analisis y desarrollo <br>de sistemas de información</p>
+                </div>     
+                <div class="col">
+                    <h4>Santiago Bedoya</h4>
+                    <p>Tecnologo en analisis y desarrollo <br>de sistemas de información</p>
+                </div>     
             </div>
-            <!-- Desc -->
-            <div class="circle-foto rounded-circle mx-auto">
-                <img class="img-team" src="/images/Enmascarar_grupo_9.png" alt="">
-                <p>Lorem, ipsum dolor.</p>
+
+            <div class="row">
+                <div class="col">
+                    <h4>Cristian Camilo Vazques</h4>
+                    <p>Ingeniero de Sistemas <br> y Telecominicaciones</p>
+                </div>
+                <div class="col">
+                    <h4>Sebastian Corrales</h4>
+                    <p>Tecnologo en analisis y desarrollo <br>de sistemas de información</p>
+                </div>     
+                <div class="col">
+                    <h4>Santiago Bedoya</h4>
+                    <p>Tecnologo en analisis y desarrollo <br>de sistemas de información</p>
+                </div>     
             </div>
             <!-- Desc -->
 
 
         </div>
-        <a href="" class="btn btn-semillero mt-5">Inscripción</a>
     </section>
 
     <section>
-
-        <div class="carousel-images shadow p-3 mb-5 bg-white rounded">
-            <div class="contenido row ">
-                <div class="col">
-
-                    <img src="http://placehold.it/500x350" alt="">
-                </div>
-                <div class="contenido-desc">
-                    <h2 class="title">Título</h2>
-                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam perferendis quo
-                        quasi nobis quis molestias quod, dolores ipsam qui veniam hic fuga vel non debitis iusto magnam
-                        architecto. Cupiditate est laborum perspiciatis reprehenderit! Aliquid animi cumque veritatis
-                        voluptatem doloribus eaque veniam minima velit iste, architecto et ipsum earum harum pariatur?
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <div class="talleres">
             <h1 class="title-taller mx-auto">
                 Talleres
             </h1>
         </div>
-        <div class="row taller-desc">
-            <div class="imgs col-2">
-                <div class="img-taller">
-                    <div class="img-taller2">
-                        <div class="img-calendar">
-
+        <div class="row">
+        <div class="col-3 taller">
+                    <img src="{{Storage::url('semilleros/esquinaTaller.png')}}" class="img-esquina" alt="">
+                <div class="imgs-taller-post">
+                    <div class="taller-post">
+                        <div class="img-calendar">            
                         </div>
                     </div>
                 </div>
+                <div class="taller-decription  m-1 mt-5">
+                    <h1 class=" text-center title title-taller-desc">7 de Julio</h1>
+                    <p class="descripcion-taller">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                        sint illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    </p>
+                </div>
             </div>
-            <div class="contenido-taller col-10">
-                <h1 class="title title-taller-desc">7 de Julio</h1>
-                <p class="descripcion-taller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
-                    sint
-                    illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
-                    Repellendus
-                    facilis dolores nulla rem similique non sint mollitia minima? Recusandae non asperiores
-                    voluptatibus
-                </p>
+            <div class="col-3 taller">
+                    <img src="{{Storage::url('semilleros/esquinaTaller.png')}}" class="img-esquina" alt="">
+                <div class="imgs-taller-post">
+                    <div class="taller-post">
+                        <div class="img-calendar">            
+                        </div>
+                    </div>
+                </div>
+                <div class="taller-decription  m-1 mt-5">
+                    <h1 class=" text-center title title-taller-desc">7 de Julio</h1>
+                    <p class="descripcion-taller">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                        sint illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    </p>
+                </div>
+            </div>
+            <div class="col-3 taller">
+                    <img src="{{Storage::url('semilleros/esquinaTaller.png')}}" class="img-esquina" alt="">
+                <div class="imgs-taller-post">
+                    <div class="taller-post">
+                        <div class="img-calendar">            
+                        </div>
+                    </div>
+                </div>
+                <div class="taller-decription  m-1 mt-5">
+                    <h1 class=" text-center title title-taller-desc">7 de Julio</h1>
+                    <p class="descripcion-taller">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                        sint illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="row taller-desc">
-            <div class="imgs col-2">
-                <div class="img-taller">
-                    <div class="img-taller2">
-                        <div class="img-calendar">
-
+        <div class="row">
+        <div class="col-3 taller">
+                    <img src="{{Storage::url('semilleros/esquinaTaller.png')}}" class="img-esquina" alt="">
+                <div class="imgs-taller-post">
+                    <div class="taller-post">
+                        <div class="img-calendar">            
                         </div>
                     </div>
                 </div>
+                <div class="taller-decription  m-1 mt-5">
+                    <h1 class=" text-center title title-taller-desc">7 de Julio</h1>
+                    <p class="descripcion-taller">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                        sint illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    </p>
+                </div>
             </div>
-            <div class="contenido-taller col-10">
-                <h1 class="title title-taller-desc">7 de Julio</h1>
-                <p class="descripcion-taller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
-                    sint
-                    illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
-                    Repellendus
-                    facilis dolores nulla rem similique non sint mollitia minima? Recusandae non asperiores
-                    voluptatibus
-                </p>
-            </div>
-        </div>
-        <div class="row taller-desc">
-            <div class="imgs col-2">
-                <div class="img-taller">
-                    <div class="img-taller2">
-                        <div class="img-calendar">
-
+            <div class="col-3 taller">
+                    <img src="{{Storage::url('semilleros/esquinaTaller.png')}}" class="img-esquina" alt="">
+                <div class="imgs-taller-post">
+                    <div class="taller-post">
+                        <div class="img-calendar">            
                         </div>
                     </div>
                 </div>
+                <div class="taller-decription  m-1 mt-5">
+                    <h1 class=" text-center title title-taller-desc">7 de Julio</h1>
+                    <p class="descripcion-taller">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                        sint illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    </p>
+                </div>
             </div>
-            <div class="contenido-taller col-10">
-                <h1 class="title title-taller-desc">7 de Julio</h1>
-                <p class="descripcion-taller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
-                    sint
-                    illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
-                    Repellendus
-                    facilis dolores nulla rem similique non sint mollitia minima? Recusandae non asperiores
-                    voluptatibus
-                </p>
+            <div class="col-3 taller">
+                    <img src="{{Storage::url('semilleros/esquinaTaller.png')}}" class="img-esquina" alt="">
+                <div class="imgs-taller-post">
+                    <div class="taller-post">
+                        <div class="img-calendar">            
+                        </div>
+                    </div>
+                </div>
+                <div class="taller-decription  m-1 mt-5">
+                    <h1 class=" text-center title title-taller-desc">7 de Julio</h1>
+                    <p class="descripcion-taller">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum
+                        sint illum voluptates, laudantium veniam omnis aspernatur eaque porro earum, harum nemo hic!
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Trazados -->
 </div>
-        <div class="first-line">
+<h1 class="text-center title-taller">Galeria</h1>
+    <img src="{{Storage::url('semilleros/rectangulo.png')}}" class="rectaungulo-gallery border" alt="">
+<section class="gallery">
+    <div class="row">
+        <div class="col border">
+            <img src="{{Storage::url('semilleros/gallery1.jpg')}}" alt="">
+   
+           <img src="{{Storage::url('semilleros/gallery2.jpg')}}" alt="">
+  
+            <img src="{{Storage::url('semilleros/gallery3.jpg')}}" alt="">
+        </div>
+    </div>
+</section>
+<div class="first-line">
 
         </div>
         <div class="second-line">
