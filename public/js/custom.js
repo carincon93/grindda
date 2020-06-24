@@ -137,10 +137,11 @@ $(document).ready(function () {
     loop: true,
     margin: 10,
     nav: true,
-    navText: "<>",
+    navText: ['<', '>'],
     autoplay: true,
     autoplayTimeout: 10000,
     mouseDrag: false,
+    dots: true,
     responsive: {
       0: {
         items: 1
@@ -151,10 +152,11 @@ $(document).ready(function () {
     center: true,
     loop: true,
     margin: 10,
-    nav: true,
-    navText: "<>",
-    autoplay: false,
-    autoplayTimeout: 10000,
+    nav: false,
+    navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+    autoplay: true,
+    autoplayTimeout: 5000,
+    mouseDrag: true,
     responsive: {
       0: {
         items: 1
@@ -167,6 +169,7 @@ $(document).ready(function () {
       }
     }
   });
+  $('.owl-equipo .owl-nav').removeClass('disabled');
   $('.owl-semillero').owlCarousel({
     center: true,
     loop: true,
@@ -182,6 +185,80 @@ $(document).ready(function () {
       },
       3000: {
         items: 5
+      }
+    }
+  });
+  $('.owl-news').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      2000: {
+        items: 3
+      },
+      3000: {
+        items: 5
+      }
+    }
+  });
+  $('.owl-semilleros').owlCarousel({
+    loop: true,
+    margin: 100,
+    nav: true,
+    navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+    center: true,
+    responsive: {
+      0: {
+        items: 3
+      }
+    }
+  });
+  $('.owl-eventos').owlCarousel({
+    loop: true,
+    margin: 100,
+    nav: true,
+    navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+    center: true,
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
+  });
+  $('.owl-galeria-eventos').owlCarousel({
+    loop: true,
+    nav: true,
+    navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+    center: true,
+    responsive: {
+      0: {
+        items: 3
+      }
+    }
+  });
+  $('.owl-galeria-proyectos').owlCarousel({
+    loop: true,
+    nav: true,
+    navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+    center: true,
+    responsive: {
+      0: {
+        items: 3
+      }
+    }
+  });
+  $('.owl-proyectos').owlCarousel({
+    loop: true,
+    nav: true,
+    margin: 10,
+    navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+    center: true,
+    responsive: {
+      0: {
+        items: 3
       }
     }
   });
@@ -234,7 +311,7 @@ itemAnimated.forEach(function (item) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Cristian\DevProjects\grindda\resources\js\custom.js */"./resources/js/custom.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/sennova/grindda/resources/js/custom.js */"./resources/js/custom.js");
 
 
 /***/ })
