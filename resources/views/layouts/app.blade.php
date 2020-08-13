@@ -62,7 +62,7 @@
                                 <a class="dropdown-item" href="{{ route('quienes_somos.lineas_investigacion') }}">Líneas de investigación</a>
                             </div>
                         </li>
-                        <li class="nav-item {{ Request::is('semilleros*') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('semilleros') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('semilleros') }}">Semilleros</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -80,16 +80,16 @@
                         <li class="nav-item {{ Request::is('proyectos*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('proyectos') }}">Proyectos</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdownAplicaciones" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Aplicaciones <span class="caret"></span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownAplicaciones">
-                                @foreach ($aplicaciones as $key => $aplicacion)
-                                    <a class="dropdown-item" href="{{ $aplicacion->url }}" target="_blank">{{ $aplicacion->nombre }}</a>
-                                @endforeach
-                            </div>
+                        <li class="nav-item">
+                            <li class="nav-item {{ Request::is('aplicaciones*') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('aplicaciones') }}">Aplicaciones</a>
+                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <!-- <li class="nav-item {{ Request::is('aplicaciones*') ? 'active' : '' }}"> -->
+                            <li class="">
+                                <a class="nav-link" href="{{ route('contacto') }}">Contactenos</a>
+                            </li>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdownProyectos" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

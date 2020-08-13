@@ -163,9 +163,6 @@ section.m-250 {
   border-top: 1px solid #F0F0F0;
   font-weight: bold;
 }
-.dropdown:hover>.dropdown-menu {
-  display: block;
-}
 
 /* ==========================================================================
 Página principal
@@ -275,7 +272,7 @@ header.jumbotron {
 }
 
 header.jumbotron h1 {
-  color: #78af37;
+  color: white;
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -297,8 +294,8 @@ header.jumbotron:after {
 }
 
 .jumbotron-publicaciones {
-  background: #e9ecef url(/storage/carousel/recurso-1.jpg) no-repeat;
-  background-size: cover;
+  background: linear-gradient(to right, #e2e2e2, #c8dfe2);
+  height: 65%;
 }
 
 .jumbotron-lineas-investigacion {
@@ -307,8 +304,9 @@ header.jumbotron:after {
 }
 
 .jumbotron-semilleros {
-  background: #e9ecef url(/storage/carousel/OpwRD2p0nmiUR1v7kzmG.jpg) no-repeat center right;
+  background: url(/storage/carousel/headerSemilleros.jpg) no-repeat center right;
   background-size: cover;
+  height: 600px;
 }
 
 .linea-investigacion-even,
@@ -601,14 +599,34 @@ Jumbotron eventos
 Publicaciones
 ========================================================================== */
 
+.jumbotron-publicaciones {
+  width: 100%;
+  height: 400px !important;
+  background: linear-gradient(to right, #e2e2e2, #c8dfe2) !important;
+  margin-bottom: 150px;
+}
+
 .card-publicaciones img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.card-publicaciones h1 {
+  color: #707070 !important;
+}
+
 .card-publicaciones .block-with-text {
+  margin-top: 100px;
   max-height: 9.5em;
+}
+
+.card-publicaciones .btn-publicaciones {
+  background: linear-gradient(to right, #ff6b09, #ff8fe2);
+  position: relative;
+  left: auto !important;
+  right: auto !important;
+  color: white;
 }
 
 .icono-enlace {
@@ -679,6 +697,508 @@ Footer
 .company {
   color: #74b848;
 }
+
+/* ==========================================================================
+Semillero
+========================================================================== */
+
+.img-location {
+  margin-top: -70px !important;
+}
+
+.form-contacto {
+  margin-top: -100px !important;
+  box-shadow: 0px 3px 8px -3px rgba(0, 0, 0, 0.75);
+}
+
+.btn-contacto {
+  background: linear-gradient(to right, #ff6b09, #ff8fe2);
+  width: 100px;
+  height: 35px;
+}
+
+h1.title-location {
+  color: #707070 !important;
+}
+
+.contacto {
+  color: #707070 !important;
+}
+
+/* ==========================================================================
+Semillero
+========================================================================== */
+
+/* ==========================================================================
+Semillero
+========================================================================== */
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.semillero-bg-header {
+  background-color: #ffcc00;
+  height: 700px;
+}
+
+.title {
+  color: #f8d800;
+}
+
+.title-semillero {
+  color: white;
+  position: relative;
+  z-index: 99;
+}
+
+.logo-semillero {
+  background: url(/images/SemilleroAmarillo.png) no-repeat center;
+  width: 400px;
+  height: 102px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.logo-text {
+  padding-bottom: 250px;
+  margin-top: 300px;
+  margin-left: 80px;
+  background: url(/images/cuadros-fondo.png) no-repeat center;
+}
+
+.descripcion {
+  width: 500px;
+  line-height: 2rem;
+  text-align: justify;
+  color: #525f7f;
+}
+
+.img-team {
+  border-radius: 50%;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+div.lastname-team {
+  padding-top: 130px;
+}
+
+div.username-team h1 {
+  text-align: right;
+  margin-left: 250px;
+  font-size: 50px;
+  color: #f8d800;
+}
+
+div.lastname-team h1 {
+  font-size: 50px;
+  margin-left: -100px;
+  color: #f8d800;
+}
+
+.group-integrante {
+  display: inline-block;
+}
+
+.btn-semillero {
+  background-image: linear-gradient(to right, #ff6b09, #ff8fe2);
+  width: 100px;
+  height: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.group-team {
+  margin-top: 100px;
+}
+
+.group-team div p {
+  margin-top: 40px;
+  position: relative;
+  left: 30px;
+}
+
+section {
+  padding-bottom: 50px;
+}
+
+div.contenido-desc {
+  margin-right: 10px;
+}
+
+.img-esquina {
+  position: relative;
+  left: -18px;
+}
+
+div.taller {
+  width: 200px !important;
+  height: 350px;
+  border-radius: 25px;
+  border: 1px solid gray;
+  margin: 20px;
+}
+
+h1.title-taller {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  font-size: 50px;
+  color: #f8d800;
+  padding-bottom: 150px;
+}
+
+.taller-decription {
+  position: relative;
+  top: -90px;
+}
+
+.imgs-taller-post {
+  position: relative;
+  top: -50px;
+}
+
+.taller-post {
+  width: 70px;
+  height: 70px;
+  background: url(/images/Trazado9809.png) no-repeat center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.img-calendar {
+  background: url(/images/calendar.png) no-repeat center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+section.gallery div.row div img {
+  width: 33.3%;
+  height: 300px;
+  margin: -2px;
+}
+
+section.gallery {
+  position: relative;
+  margin-top: -300p;
+}
+
+.rectaungulo-gallery {
+  border: 1px solid crimson;
+  height: 500px;
+  width: 1000px;
+  position: relative;
+  margin-left: 20%;
+  top: 400px;
+  z-index: 6;
+}
+
+/* Trazados de lineas */
+
+div.first-line {
+  background: url(/images/first-line.png) no-repeat center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -3400px;
+  z-index: 6;
+  background-size: 250vh;
+}
+
+div.second-line {
+  background: url(/images/second-line.png) no-repeat center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -2900px;
+  z-index: 999;
+  background-size: cover;
+}
+
+div.third-line-green {
+  background: url(/images/third-line-green.png) no-repeat center;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  top: 100px;
+  z-index: 99;
+  background-size: 200vh;
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+}
+
+div.sombra {
+  background: url(/images/sombra.png) no-repeat center;
+  width: 200px;
+  height: 800px;
+  position: relative;
+  top: -2500px;
+  left: -30px;
+  z-index: 99;
+  background-size: contain;
+}
+
+.inscripciones-semillero {
+  height: 100px;
+  background-color: #ffcc006e;
+  position: relative;
+  top: -245px;
+}
+
+.inscripciones-semillero-detalle {
+  height: 150px;
+  background-color: #f8d445a6;
+  position: relative;
+  top: -90px;
+}
+
+.list-semilleros {
+  margin-top: -245px;
+}
+
+.semillero-amarillo-cont {
+  background-color: #ffcc00;
+}
+
+.semillero-verde-cont {
+  background-color: #33cc00;
+}
+
+.semillero-azul-cont {
+  background-color: #5497ff;
+}
+
+.semillero-naranja-cont {
+  background-color: #ff6600;
+}
+
+.semillero-rojo-cont {
+  background-color: #fe0034;
+}
+
+img.img-right {
+  position: relative;
+  top: 50px;
+  left: 285px;
+  height: 150px;
+}
+
+img.img-left {
+  position: relative;
+  top: 100px;
+  left: -50px;
+  height: 150px;
+}
+
+.content-row-2 {
+  position: relative;
+  top: 50px;
+  height: 99%;
+}
+
+h1.title-semillero-color {
+  font-size: 40px;
+}
+
+.btn-right {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0);
+  width: 250px !important;
+  height: 50px !important;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  left: 580px;
+  top: 100px;
+}
+
+.btn-left {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0);
+  width: 250px !important;
+  height: 50px !important;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  left: 0px;
+  top: 100px;
+}
+
+img.chica {
+  background-size: contain;
+}
+
+.semillero-container {
+  padding-top: 100px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.join-images {
+  position: relative;
+  width: 500px;
+}
+
+.img-group-semillero1 {
+  width: 400px;
+  height: 500px;
+}
+
+.img-group-semillero2 {
+  width: 500px;
+  position: relative;
+  top: 350px;
+  left: -250px;
+}
+
+.rectangle-img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: relative;
+  margin-top: -450px;
+  margin-left: -150px;
+  width: 600px;
+  height: 400px;
+}
+
+/* ==========================================================================
+Semillero
+========================================================================== */
+
+/* ==========================================================================
+Aplicaciones
+========================================================================== */
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.header-aplication {
+  width: 100%;
+  height: 65%;
+  background: linear-gradient(to right, #e2e2e2, #c8dfe2);
+  margin-bottom: 150px;
+}
+
+.header-aplication h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  width: 370px;
+}
+
+.aplication-img {
+  width: 200px;
+  height: 300px;
+  border: 1px solid crimson;
+  margin-right: 75px;
+}
+
+.aplication-description {
+  margin-left: -20px;
+}
+
+.aplication-body {
+  margin-bottom: 250px;
+  height: 300px;
+}
+
+.aplication-description h1 {
+  color: #707070;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.aplication-description p {
+  line-height: 25px;
+  text-align: left;
+  color: #707070;
+}
+
+.btn-aplication {
+  background: linear-gradient(to right, #ff6b09, #ff8fe2);
+  border-radius: 2px;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  top: 75px;
+}
+
+.next-aplication {
+  color: #ff6b09;
+  width: 50px;
+  position: relative;
+  left: 95%;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* ==========================================================================
+Aplicaciones
+========================================================================== */
+
+/* ==========================================================================
+Blog
+========================================================================== */
+
+div.portada1 {
+  background-image: url(/public/storage/blog/recursos_blog/portada1.jpg) no-repeat center !important;
+  background-size: cover;
+  border: 1px solid crimson !important;
+}
+
+.img-blog {
+  width: 350px;
+  height: 200px;
+}
+
+.btn {
+  background: linear-gradient(to right, #ff6b09, #ff8fe2);
+  border-radius: 2px;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.noticia-blog {
+  margin-bottom: 100px;
+}
+
+/* ==========================================================================
+/Blog
+========================================================================== */
 
 @media (max-width: 991px) {
   .login-dropdown {

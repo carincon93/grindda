@@ -61,9 +61,15 @@ class PaginaController extends Controller
     {
         $semillero = Semillero::where('nombre', str_replace('-', ' ', $nombreSemillero))->firstOrFail();
 
-        dd($semillero);
+        // dd($semillero);
 
-        // return view('pagina.semilleros.ver', compact('semillero'));
+        return view('pagina.semilleros.ver', compact('semillero'));
+    }
+
+    public function aplicaciones(){
+        $aplicaciones = Aplicacion::orderBy('nombre')->get();
+
+        return view('pagina.aplicaciones.listar', compact('aplicaciones'));
     }
 
     public function eventos($ano)
@@ -153,5 +159,11 @@ class PaginaController extends Controller
         // $fondo->save();
 
         return redirect()->route('fondos.index');
+    }
+    public function contacto(){
+        return view('pagina.contacto.contacto');
+    }
+    public function blog(){
+        return view('pagina.blog.blog');
     }
 }

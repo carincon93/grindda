@@ -26,7 +26,7 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-    /**
+     /**
      * Report or log an exception.
      *
      * @param  \Throwable  $exception

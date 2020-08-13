@@ -4,109 +4,131 @@
 html {
     height: 100%;
 }
+
 body {
     background-color: #f7f7f7;
-    font-family: calibri;
-    min-height: 100%;
+    font-family     : calibri;
+    min-height      : 100%;
 }
+
 table {
     table-layout: fixed;
 }
+
 textarea {
     text-align: justify;
 }
+
 button:focus {
     outline: 0px;
 }
+
 button.btn.btn-info {
     background: #34abeb;
-    color: #fff;
+    color     : #fff;
 }
+
 section.m-250 {
     max-width: 100%;
-    overflow: hidden;
+    overflow : hidden;
 }
+
 .text-decoration-underline {
     text-decoration: underline;
 }
+
 .dropdown-item {
     &:hover {
         background-color: #d2ff9d;
     }
 }
+
 .card {
     background-color: #fff;
-    border: none;
-    border-radius: 2px;
-    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.07), 1px 2px 5px 0 rgba(0, 0, 0, 0.06);
-    margin-bottom: 30px;
-    position: relative;
+    border          : none;
+    border-radius   : 2px;
+    box-shadow      : 1px 1px 1px 0 rgba(0, 0, 0, 0.07), 1px 2px 5px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom   : 30px;
+    position        : relative;
 }
+
 .form-control {
-    background: #fff;
-    border: 1px solid #dadada;
+    background   : #fff;
+    border       : 1px solid #dadada;
     border-radius: 0px;
-    color: #636b6f;
+    color        : #636b6f;
 }
 
 .tooltip-inner {
-    max-width: 236px !important;
-    font-size: 12px;
+    max-width : 236px !important;
+    font-size : 12px;
     background: #34abeb;
-    color: #fff;
-    border: 0px;
+    color     : #fff;
+    border    : 0px;
     text-align: left;
 }
+
 .tooltip.show {
     opacity: 1;
 }
-.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before {
+
+.bs-tooltip-top .arrow::before,
+.bs-tooltip-auto[x-placement^=top] .arrow::before {
     border-top-color: #34abeb;
 }
 
 .p-20 {
     padding: 20px;
 }
+
 .text-verde {
     color: #8BC34A;
 }
+
 .clearfix {
     clear: both;
 }
+
 .m-250 {
     margin: 250px 0;
 }
+
 .mt-header {
     margin-top: 64.22px;
 }
+
 .bg-gold {
-    background: $gold;
+    background   : $gold;
     margin-bottom: 10px;
 }
+
 .block-with-text {
-    overflow: hidden;
-    position: relative;
+    overflow  : hidden;
+    position  : relative;
     text-align: justify;
 }
+
 /* create the ... */
 .block-with-text:before {
     background: #fff;
-    bottom: 0;
-    content: "...";
-    padding: 0 4px;
-    position: absolute;
-    right: 20px;
+    bottom    : 0;
+    content   : "...";
+    padding   : 0 4px;
+    position  : absolute;
+    right     : 20px;
 }
+
 /* hide ... if we have text, which is less than or equal to max lines */
 .block-with-text:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 1em;
-    height: 1em;
+    content   : '';
+    position  : absolute;
+    right     : 0;
+    width     : 1em;
+    height    : 1em;
     margin-top: 0.2em;
     background: white;
 }
+
 .mensaje-eliminar {
     line-height: 1.2;
 }
@@ -115,21 +137,28 @@ section.m-250 {
     table-layout: fixed;
 
     &.dataTable {
-        margin: 0!important;
+        margin: 0 !important;
     }
-    thead tr th, thead tr td, tbody tr th, tbody tr td, tfoot tr th, tfoot tr td {
+
+    thead tr th,
+    thead tr td,
+    tbody tr th,
+    tbody tr td,
+    tfoot tr th,
+    tfoot tr td {
         border: 0px;
     }
 
-    thead tr th, tbody tr td {
-        border-bottom: 1px solid #F0F0F0;
-        font-size: 13px;
+    thead tr th,
+    tbody tr td {
+        border-bottom : 1px solid #F0F0F0;
+        font-size     : 13px;
         vertical-align: middle;
     }
 
     thead tr th {
-        background: #fafafa;
-        border-top: 1px solid #F0F0F0;
+        background : #fafafa;
+        border-top : 1px solid #F0F0F0;
         font-weight: bold;
     }
 }
@@ -138,84 +167,99 @@ section.m-250 {
 Página principal
 ========================================================================== */
 .card.bg-gold {
-    width: 100%;
-    margin: auto;
-    padding: 36px;
-    color: #fff;
-    line-height: 1.3;
+    width        : 100%;
+    margin       : auto;
+    padding      : 36px;
+    color        : #fff;
+    line-height  : 1.3;
     border-radius: 6px;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
+    box-shadow   : 0 0 15px 0 rgba(0, 0, 0, 0.05);
     margin-bottom: 22px;
 }
+
 .navbar-laravel.navbar-pagina {
     .navbar-brand {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 24px;
+        color     : rgba(255, 255, 255, 0.9);
+        font-size : 24px;
         transition: all 0.3s ease;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             color: rgba(255, 255, 255, 0.6);
         }
     }
+
     .navbar-nav .nav-item {
         &.active {
-            background: #7ab23a;
+            background   : #7ab23a;
             border-radius: 42px;
         }
+
         .nav-link {
             color: #fff;
         }
     }
 }
+
 .header-pagina-principal {
     clip-path: url(#myClip);
-    height: 710px;
-    position: relative;
-    z-index: 2;
+    height   : 710px;
+    position : relative;
+    z-index  : 2;
+
     &:after {
-        content: "";
+        content   : "";
         background: url(/images/grindda_logo_blanco.png) center center no-repeat;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        bottom: 15%;
-        width: 100%;
-        z-index: 1;
+        height    : 100%;
+        left      : 0;
+        position  : absolute;
+        right     : 0;
+        bottom    : 15%;
+        width     : 100%;
+        z-index   : 1;
     }
 }
+
 .grindda-info {
-    align-items: center;
-    background: url(/storage/proyectos/u5CDMpIhuY3spxafGElX.jpg) no-repeat center / cover fixed;
+    align-items    : center;
+    background     : url(/storage/proyectos/u5CDMpIhuY3spxafGElX.jpg) no-repeat center / cover fixed;
     justify-content: center;
-    position: absolute;
-    left: 0;
-    line-height: normal;
-    right: 0;
-    top: 504px;
-    width: 100%;
-    z-index: 1;
+    position       : absolute;
+    left           : 0;
+    line-height    : normal;
+    right          : 0;
+    top            : 504px;
+    width          : 100%;
+    z-index        : 1;
+
     p.text-center {
         font-size: medium;
     }
 }
-.grindda-info::before, .header-publicaciones::before, .header-pagina-principal::before {
+
+.grindda-info::before,
+.header-publicaciones::before,
+.header-pagina-principal::before {
     background: rgba(49, 49, 49, 0.5);
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
+    content   : "";
+    height    : 100%;
+    left      : 0;
+    position  : absolute;
+    right     : 0;
+    top       : 0;
+    width     : 100%;
 }
+
 .card-publicacion {
-    .card-header, .card-footer {
+
+    .card-header,
+    .card-footer {
         background: #fff;
     }
+
     .card-body {
         min-height: 330px;
-        padding: 0;
+        padding   : 0;
 
         img {
             max-height: 282px;
@@ -223,59 +267,72 @@ Página principal
         }
     }
 }
+
 header.jumbotron {
     border-radius: 0px;
-    position: relative;
-    overflow: hidden;
+    position     : relative;
+    overflow     : hidden;
+
     h1 {
-        color: #78af37;
+        color      : white;
         font-weight: bold;
-        position: relative;
-        z-index: 1;
+        position   : relative;
+        z-index    : 1;
     }
+
     &:after {
         background-image: linear-gradient(141deg, #e9ecef 38%, #e9ecefc2 51%, #e9ecef47 75%);
-        content: '';
-        position: absolute;
-        height: 100%;
-        right: 0;
-        top: 0;
-        width: 100%;
+        content         : '';
+        position        : absolute;
+        height          : 100%;
+        right           : 0;
+        top             : 0;
+        width           : 100%;
     }
 }
+
 .jumbotron-informacion {
-    background-position-y: -330px;
+    background-position-y   : -330px;
     // background-position-x: 616px;
-    background-size: cover;
+    background-size         : cover;
 }
+
 .jumbotron-publicaciones {
-    background: #e9ecef url(/storage/carousel/recurso-1.jpg) no-repeat;
+    background              : linear-gradient(to right, #e2e2e2, #c8dfe2);
     // background-position-y: -330px;
     // background-position-x: 616px;
-    background-size: cover;
+    height                  : 65%;
 }
+
 .jumbotron-lineas-investigacion {
-    background: #e9ecef url(/storage/imagenes_lineas_investigacion/F7mqDVGfdJqjiNv9siqU.jpg) no-repeat center right;
+    background        : #e9ecef url(/storage/imagenes_lineas_investigacion/F7mqDVGfdJqjiNv9siqU.jpg) no-repeat center right;
     // background-size: 588px;
-    background-size: cover;
+    background-size   : cover;
 }
+
 .jumbotron-semilleros {
-    background: #e9ecef url(/storage/carousel/OpwRD2p0nmiUR1v7kzmG.jpg) no-repeat center right;
+    background              : url(/storage/carousel/headerSemilleros.jpg) no-repeat center right;
     // background-position-y: -166px;
     // background-size: 622px;
-    background-size: cover;
+    background-size         : cover;
+    height                  : 600px;
 }
-.linea-investigacion-even, .semilleros-odd {
+
+.linea-investigacion-even,
+.semilleros-odd {
     background: #e9ecef;
 }
+
 .btn-mas-informacion {
     transition: 0.4s all ease;
+
     &:hover {
         background: #1f74ff;
-        border: 2px solid #85cdf7 !important;
-        color: #fff;
+        border    : 2px solid #85cdf7 !important;
+        color     : #fff;
     }
 }
+
 /* ==========================================================================
 Panel de administracion
 ========================================================================== */
@@ -283,7 +340,8 @@ Panel de administracion
     background: #fff;
 }
 
-.pt-pagina, .pt-panel {
+.pt-pagina,
+.pt-panel {
     padding-top: 64.22px;
 }
 
@@ -292,22 +350,22 @@ Panel de administracion
 }
 
 .btn-circle {
-    background: #ffffff;
+    background   : #ffffff;
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(109, 109, 109, 0.12);
-    color: #737373;
-    display: inline-block;
+    box-shadow   : 0 2px 4px rgba(109, 109, 109, 0.12);
+    color        : #737373;
+    display      : inline-block;
     // font-size: 16px;
-    height: 25px;
-    line-height: 25px;
-    margin-right: 8px;
-    text-align: center;
-    transition: all 0.4s ease;
-    width: 25px;
+    height       : 25px;
+    line-height  : 25px;
+    margin-right : 8px;
+    text-align   : center;
+    transition   : all 0.4s ease;
+    width        : 25px;
 
     &:hover {
         background: #f5f5f5;
-        cursor: pointer;
+        cursor    : pointer;
     }
 
     &.btn {
@@ -319,16 +377,17 @@ Panel de administracion
 .vs-sidebar.vs-sidebar-parent {
     position: fixed;
 }
+
 .vs-sidebar--item {
     &.active {
-        background: -webkit-gradient(linear,left top,right top,from(transparent),to(rgba(0,0,0,.01)));
-        background: linear-gradient(90deg,transparent,rgba(0,0,0,.01));
-        border-right: 3px solid rgba($blue, 1)!important;
-        font-weight: 700;
+        background  : -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, .01)));
+        background  : linear-gradient(90deg, transparent, rgba(0, 0, 0, .01));
+        border-right: 3px solid rgba($blue, 1) !important;
+        font-weight : 700;
 
         a {
-            color: rgba($blue, 1)!important;
-            opacity: 1!important;
+            color  : rgba($blue, 1) !important;
+            opacity: 1 !important;
         }
     }
 }
@@ -340,57 +399,64 @@ Panel de administracion
 .owl-carousel.carousel-investigadores {
     .owl-item {
         align-items: center;
-        display: flex;;
-        height: 500px;
+        display    : flex;
+        ;
+        height         : 500px;
         justify-content: center;
+
         &.center {
             .card {
-                height: 500px;
+                height : 500px;
                 opacity: 1;
                 padding: 38px;
-                width: 100%;
+                width  : 100%;
             }
         }
 
         &.medium {
             .card {
                 height: 420px;
-                width: 90%;
+                width : 90%;
             }
         }
 
         .card {
-            box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
-            height: 370px;
-            padding: 35px;
-            opacity: 0.4;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
+            height    : 370px;
+            padding   : 35px;
+            opacity   : 0.4;
             transition: all .6s ease;
+
             .foto-investigador {
                 width: 120px;
             }
         }
     }
 }
+
 .owl-carousel.carousel-jumbotron {
     height: 450px;
+
     .owl-stage-outer {
         height: 450px;
+
         .owl-item {
             height: inherit;
 
             .carousel-card {
                 background: #fff;
-                box-shadow: -1px 7px 23px -11px rgba(0,0,0,.3);
-                height: auto;
-                padding: 36px;
+                box-shadow: -1px 7px 23px -11px rgba(0, 0, 0, .3);
+                height    : auto;
+                padding   : 36px;
             }
+
             .carousel-description {
                 background: #fff;
                 box-shadow: 1px 7px 23px -11px rgba(0, 0, 0, 0.13);
-                height: 80px;
-                padding: 20px;
-                position: relative;
-                z-index: 2;
+                height    : 80px;
+                padding   : 20px;
+                position  : relative;
+                z-index   : 2;
 
                 /* styles for '...' */
                 .block-with-text {
@@ -398,34 +464,38 @@ Panel de administracion
 
                     &:before {
                         bottom: 4px;
-                        right: 0;
+                        right : 0;
                     }
                 }
             }
 
             img {
-                height: 353px;
+                height    : 353px;
                 object-fit: cover;
             }
         }
     }
+
     .owl-nav {
         background: #fff;
-        position: absolute;
-        right: 50%;
-        top: 447px;
-        width: 16%;
+        position  : absolute;
+        right     : 50%;
+        top       : 447px;
+        width     : 16%;
+
         button:nth-child(1) {
             float: left;
             width: 30%;
         }
+
         button:nth-child(2) {
             background-color: #cad7dc;
-            float: right;
-            width: 70%;
+            float           : right;
+            width           : 70%;
         }
+
         button {
-            padding: 20px 5px!important;
+            padding: 20px 5px !important;
         }
     }
 }
@@ -435,9 +505,9 @@ Form de inicio de sesión
 ========================================================================== */
 .wrap-form-signin {
     .form-signin {
-        margin: auto;
+        margin : auto;
         padding: 12% 0 0;
-        width: 320px;
+        width  : 320px;
     }
 }
 
@@ -453,54 +523,58 @@ Jumbotron eventos
 ========================================================================== */
 .jumbotron-eventos {
     &:after {
-        width: 100% !important;
+        width  : 100% !important;
         z-index: 0;
     }
+
     // background: #e9ecef url(http://placehold.it/1349x610&text=Fondo) center right/cover no-repeat;
     background-position-y: -60px;
-    background-size: 622px;
+    background-size      : 622px;
 }
 
 .card-eventos {
     .col-md-7 p.text-center {
-        align-items: center;
-        display: flex;
+        align-items    : center;
+        display        : flex;
         justify-content: center;
     }
 }
+
 .card-eventos-detalle {
-    height: auto;
+    height        : auto;
     padding-bottom: 35px;
 
     .col-md-7 p.text-center {
-        display: flex;
+        display        : flex;
         justify-content: center;
-        align-items: center;
+        align-items    : center;
     }
 
     article.logros {
         &.mostrar-menos {
-            height: 600px;
+            height  : 600px;
             overflow: hidden;
+
             &:after {
-                background: #fff;
-                content: "";
-                height: 122px;
+                background    : #fff;
+                content       : "";
+                height        : 122px;
                 -webkit-filter: blur(35px);
-                filter: blur(24px);
-                left: 0;
-                position: absolute;
-                right: 0;
-                width: 94%;
-                bottom: -22px;
-                z-index: 0;
+                filter        : blur(24px);
+                left          : 0;
+                position      : absolute;
+                right         : 0;
+                width         : 94%;
+                bottom        : -22px;
+                z-index       : 0;
             }
 
             button.show-more {
                 background: #1f74ff;
-                display: block !important;
+                display   : block !important;
             }
         }
+
         &.mostrar-mas {
             height: auto;
 
@@ -508,54 +582,81 @@ Jumbotron eventos
                 display: none !important;
             }
         }
+
         button.show-more {
-            bottom: 0;
-            left: 0;
+            bottom  : 0;
+            left    : 0;
             position: absolute;
-            right: 0;
-            z-index: 2;
+            right   : 0;
+            z-index : 2;
         }
     }
 }
+
 .evento-fecha {
     background: #1f74ff;
     box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.07), 1px 2px 5px 0 rgba(0, 0, 0, 0.06);
-    color: #fff;
-    font-size: medium;
-    padding: 7px;
+    color     : #fff;
+    font-size : medium;
+    padding   : 7px;
 }
+
 .substring {
-    font-size: 100%;
+    font-size     : 100%;
     text-transform: capitalize;
 }
+
 .enlace-archivo {
-    display: block;
-    background: #f7f7f7;
-    border-radius: 9px;
-    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.07), 1px 2px 5px 0 rgba(0, 0, 0, 0.06);
-    color: #8e8e8e;
-    margin-bottom: 10px;
-    padding: 10px;
-    text-align: center;
+    display        : block;
+    background     : #f7f7f7;
+    border-radius  : 9px;
+    box-shadow     : 1px 1px 1px 0 rgba(0, 0, 0, 0.07), 1px 2px 5px 0 rgba(0, 0, 0, 0.06);
+    color          : #8e8e8e;
+    margin-bottom  : 10px;
+    padding        : 10px;
+    text-align     : center;
     text-decoration: none;
 }
+
 /* ==========================================================================
 Publicaciones
 ========================================================================== */
+
+.jumbotron-publicaciones {
+    width        : 100%;
+    height       : 400px !important;
+    background   : linear-gradient(to right, #e2e2e2, #c8dfe2) !important;
+    margin-bottom: 150px;
+}
+
 .card-publicaciones {
-    // height: 282px;
     img {
-        height: 100%;
+        height    : 100%;
         object-fit: cover;
     }
+
+    h1 {
+        color: #707070 !important;
+    }
+
     .block-with-text {
+        margin-top: 100px;
         max-height: 9.5em;
     }
+
+    .btn-publicaciones {
+        background: linear-gradient(to right, #ff6b09, #ff8fe2);
+        position  : relative;
+        left      : auto !important;
+        right     : auto !important;
+        color     : white;
+    }
 }
+
 .icono-enlace {
-    height: 34px;
+    height     : 34px;
     line-height: 34px;
-    width: 34px;
+    width      : 34px;
 }
 
 /* ==========================================================================
@@ -564,25 +665,29 @@ Footer
 .color-facebook {
     color: #3B5998;
 }
+
 .color-twitter {
     color: #55acee;
 }
+
 .color-instagram {
     color: #d32c83;
 }
+
 .color-blogger {
     color: #ff8000;
 }
+
 .list-footer-mobile {
     margin-bottom: 4rem;
-    text-align: center;
+    text-align   : center;
 }
 
 .footer-pages {
-    background: #fff;
-    font-size: 13px;
+    background    : #fff;
+    font-size     : 13px;
     padding-bottom: 55px;
-    padding-top: 75px;
+    padding-top   : 75px;
 }
 
 .footer-pages .text-footer {
@@ -595,20 +700,20 @@ Footer
 
 .mini-footer {
     background: #eee;
-    bottom: 0;
-    height: 50px;
-    left: 0;
-    position: absolute;
-    right: 0;
+    bottom    : 0;
+    height    : 50px;
+    left      : 0;
+    position  : absolute;
+    right     : 0;
 }
 
 .footer-ficha {
     background: #eee;
-    height: 50px;
+    height    : 50px;
 }
 
 .copyright {
-    padding: 25px 0;
+    padding   : 25px 0;
     border-top: 1px solid rgba(122, 137, 148, 0.07);
 }
 
@@ -616,68 +721,591 @@ Footer
     color: #74b848;
 }
 
+/* ==========================================================================
+Semillero
+========================================================================== */
+.img-location {
+    margin-top: -70px !important;
+}
+
+.form-contacto {
+    margin-top: -100px !important;
+    box-shadow: 0px 3px 8px -3px rgba(0, 0, 0, 0.75);
+}
+
+.btn-contacto {
+    background: linear-gradient(to right, #ff6b09, #ff8fe2);
+    width     : 100px;
+    height    : 35px;
+
+}
+
+h1.title-location {
+    color: #707070 !important;
+}
+
+.contacto {
+    color: #707070 !important;
+}
+
+
+/* ==========================================================================
+Semillero
+========================================================================== */
+
+
+/* ==========================================================================
+Semillero
+========================================================================== */
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.semillero-bg-header {
+    background-color: #ffcc00;
+    height          : 700px;
+}
+
+.title {
+    color: #f8d800;
+}
+
+.title-semillero {
+    color   : white;
+    position: relative;
+    z-index : 99;
+}
+
+.logo-semillero {
+
+    background   : url(/images/SemilleroAmarillo.png)no-repeat center;
+    width        : 400px;
+    height       : 102px;
+    display      : block;
+    margin-left  : auto;
+    margin-right : auto;
+    margin-bottom: 100px;
+}
+
+.logo-text {
+    padding-bottom: 250px;
+    margin-top    : 300px;
+    margin-left   : 80px;
+    background    : url(/images/cuadros-fondo.png)no-repeat center;
+}
+
+.descripcion {
+    width      : 500px;
+    line-height: 2rem;
+    text-align : justify;
+    color      : #525f7f;
+}
+
+.img-team {
+    border-radius: 50%;
+    height       : 200px;
+    display      : block;
+    margin-left  : auto;
+    margin-right : auto;
+    -o-object-fit: cover;
+    object-fit   : cover;
+}
+
+div.lastname-team {
+    padding-top: 130px;
+}
+
+div.username-team h1 {
+    text-align : right;
+    margin-left: 250px;
+    font-size  : 50px;
+    color      : #f8d800;
+}
+
+div.lastname-team h1 {
+    font-size  : 50px;
+    margin-left: -100px;
+    color      : #f8d800;
+}
+
+.group-integrante {
+    display: inline-block;
+}
+
+.btn-semillero {
+    background-image: linear-gradient(to right, #ff6b09, #ff8fe2);
+    width           : 100px;
+    height          : 35px;
+    display         : block;
+    margin-left     : auto;
+    margin-right    : auto;
+}
+
+.group-team {
+    margin-top: 100px;
+}
+
+.group-team div p {
+    margin-top: 40px;
+    position  : relative;
+    left      : 30px;
+}
+
+section {
+    padding-bottom: 50px;
+}
+
+
+div.contenido-desc {
+    margin-right: 10px;
+}
+
+.img-esquina {
+    position: relative;
+    left    : -18px;
+}
+
+div.taller {
+    width        : 200px !important;
+    height       : 350px;
+    border-radius: 25px;
+    border       : 1px solid gray;
+    margin       : 20px;
+}
+
+
+h1.title-taller {
+    display       : block;
+    margin-left   : auto;
+    margin-right  : auto;
+    width         : 200px;
+    font-size     : 50px;
+    color         : #f8d800;
+    padding-bottom: 150px;
+}
+
+.taller-decription {
+    position: relative;
+    top     : -90px;
+}
+
+.imgs-taller-post {
+    position: relative;
+    top     : -50px;
+}
+
+.taller-post {
+    width          : 70px;
+    height         : 70px;
+    background     : url(/images/Trazado9809.png)no-repeat center;
+    background-size: contain;
+    display        : flex;
+    align-items    : center;
+    position       : relative;
+    margin-right   : auto;
+    margin-left    : auto;
+}
+
+.img-calendar {
+    background     : url(/images/calendar.png)no-repeat center;
+    background-size: contain;
+    width          : 20px;
+    height         : 20px;
+    display        : block;
+    margin-left    : auto;
+    margin-right   : auto;
+    position       : relative;
+}
+
+section.gallery div.row div img {
+    width : 33.3%;
+    height: 300px;
+    margin: -2px;
+
+}
+
+section.gallery {
+    position  : relative;
+    margin-top: -300p;
+}
+
+.rectaungulo-gallery {
+    border     : 1px solid crimson;
+    height     : 500px;
+    width      : 1000px;
+    position   : relative;
+    margin-left: 20%;
+    top        : 400px;
+    z-index    : 6;
+}
+
+/* Trazados de lineas */
+
+div.first-line {
+    background     : url(/images/first-line.png)no-repeat center;
+    width          : 100%;
+    height         : 100%;
+    position       : relative;
+    top            : -3400px;
+    z-index        : 6;
+    background-size: 250vh;
+}
+
+div.second-line {
+    background     : url(/images/second-line.png)no-repeat center;
+    width          : 100%;
+    height         : 100%;
+    position       : relative;
+    top            : -2900px;
+    z-index        : 999;
+    background-size: cover;
+}
+
+div.third-line-green {
+    background     : url(/images/third-line-green.png)no-repeat center;
+    width          : 50%;
+    height         : 50%;
+    position       : relative;
+    top            : 100px;
+    z-index        : 99;
+    background-size: 200vh;
+    transform      : rotate(18deg);
+}
+
+div.sombra {
+    background     : url(/images/sombra.png)no-repeat center;
+    width          : 200px;
+    height         : 800px;
+    position       : relative;
+    top            : -2500px;
+    left           : -30px;
+    z-index        : 99;
+    background-size: contain;
+}
+
+.inscripciones-semillero {
+    height: 100px;
+
+    background-color: #ffcc006e;
+    position        : relative;
+    top             : -245px;
+
+}
+
+.inscripciones-semillero-detalle {
+    height          : 150px;
+    background-color: #f8d445a6;
+    position        : relative;
+    top             : -90px;
+}
+
+.list-semilleros {
+    margin-top: -245px;
+}
+
+.semillero-amarillo-cont {
+    background-color: #ffcc00;
+}
+
+.semillero-verde-cont {
+    background-color: #33cc00;
+}
+
+.semillero-azul-cont {
+    background-color: #5497ff;
+}
+
+.semillero-naranja-cont {
+    background-color: #ff6600;
+}
+
+.semillero-rojo-cont {
+    background-color: #fe0034;
+}
+
+
+img.img-right {
+    position: relative;
+    top     : 50px;
+    left    : 285px;
+    height  : 150px;
+}
+
+img.img-left {
+    position: relative;
+    top     : 100px;
+    left    : -50px;
+    height  : 150px;
+}
+
+.content-row-2 {
+    position: relative;
+    top     : 50px;
+    height  : 99%;
+}
+
+h1.title-semillero-color {
+    font-size: 40px;
+}
+
+.btn-right {
+    background-color: #fff;
+    color           : rgba(0, 0, 0, 0);
+    width           : 250px !important;
+    height          : 50px !important;
+    text-decoration : none;
+
+    padding-left  : 15px;
+    padding-right : 15px;
+    padding-top   : 5px;
+    padding-bottom: 5px;
+    position      : relative;
+    left          : 580px;
+    top           : 100px;
+}
+
+.btn-left {
+    background-color: #fff;
+    color           : rgba(0, 0, 0, 0);
+    width           : 250px !important;
+    height          : 50px !important;
+    text-decoration : none;
+
+    padding-left  : 15px;
+    padding-right : 15px;
+    padding-top   : 5px;
+    padding-bottom: 5px;
+    position      : relative;
+    left          : 0px;
+    top           : 100px;
+}
+
+img.chica {
+    background-size: contain;
+}
+
+.semillero-container {
+    padding-top : 100px;
+    position    : relative;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+div.join-images {
+    position: relative;
+    width   : 500px;
+}
+
+.img-group-semillero1 {
+    width: 400px;
+    height: 500px;
+}
+
+.img-group-semillero2 {
+    width: 500px;
+    position: relative;
+    top     : 350px;
+    left    : -250px;
+}
+.rectangle-img{
+    transform: rotate(90deg);
+    
+    position: relative;
+    margin-top: -450px;
+    margin-left: -150px;
+    width: 600px;
+    height: 400px;
+}
+/* ==========================================================================
+Semillero
+========================================================================== */
+
+
+
+/* ==========================================================================
+Aplicaciones
+========================================================================== */
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.header-aplication {
+    width        : 100%;
+    height       : 65%;
+    background   : linear-gradient(to right, #e2e2e2, #c8dfe2);
+    margin-bottom: 150px;
+}
+
+.header-aplication h1 {
+    display     : block;
+    margin-left : auto;
+    margin-right: auto;
+    position    : relative;
+    top         : 50%;
+    color       : white;
+    font-size   : 60px;
+    font-weight : bold;
+    width       : 370px;
+}
+
+.aplication-img {
+    width       : 200px;
+    height      : 300px;
+    border      : 1px solid crimson;
+    margin-right: 75px;
+
+}
+
+.aplication-description {
+    margin-left: -20px;
+}
+
+.aplication-body {
+    margin-bottom: 250px;
+    height       : 300px;
+}
+
+.aplication-description h1 {
+    color         : #707070;
+    font-weight   : bold;
+    text-transform: uppercase;
+}
+
+.aplication-description p {
+    line-height: 25px;
+    text-align : left;
+    color      : #707070;
+}
+
+.btn-aplication {
+    background   : linear-gradient(to right, #ff6b09, #ff8fe2);
+    border-radius: 2px;
+    padding      : 8px;
+    color        : white;
+    font-weight  : bold;
+    position     : relative;
+    top          : 75px;
+}
+
+.next-aplication {
+    color      : #ff6b09;
+    width      : 50px;
+    position   : relative;
+    left       : 95%;
+    font-weight: bolder;
+    font-size  : 20px;
+}
+
+
+// Trazado
+
+/* ==========================================================================
+Aplicaciones
+========================================================================== */
+/* ==========================================================================
+Blog
+========================================================================== */
+div.portada1 {
+    background-image: url(/public/storage/blog/recursos_blog/portada1.jpg) no-repeat center !important;
+    background-size : cover;
+    border          : 1px solid crimson !important;
+}
+
+.img-blog {
+    width : 350px;
+    height: 200px;
+}
+
+.btn {
+    background   : linear-gradient(to right, #ff6b09, #ff8fe2);
+    border-radius: 2px;
+    padding      : 8px;
+    color        : white;
+    font-weight  : bold;
+    position     : relative;
+}
+
+.noticia-blog {
+    margin-bottom: 100px;
+}
+
+/* ==========================================================================
+/Blog
+========================================================================== */
+
 @media (max-width: 991px) {
     .login-dropdown {
         display: none;
     }
 }
+
 @media (min-width: 767px) and (max-width: 991px) {
-    .card.bg-gold > h1 {
+    .card.bg-gold>h1 {
         font-size: 28px;
     }
 }
+
 @media (max-width: 767px) {
     .grindda-info .container {
         margin-top: 200px !important;
     }
+
     .carousel.m-250 {
         margin-top: 400px;
     }
+
     .card.bg-gold {
         width: 100%;
     }
+
     .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item .carousel-description .block-with-text {
         max-height: 3.19em;
-        font-size: 12px;
+        font-size : 12px;
     }
+
     .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item .carousel-description {
         bottom: 76px;
     }
+
     .navbar-nav .nav-item {
         .nav-link {
             padding-left: 20px;
         }
     }
+
     .logo-footer {
-        display: block;
-        height: auto;
-        margin: auto;
+        display      : block;
+        height       : auto;
+        margin       : auto;
         margin-bottom: 60px;
-        max-width: 100%;
-        width: 155px;
+        max-width    : 100%;
+        width        : 155px;
     }
+
     .card-publicaciones {
         height: auto;
     }
-    .card-eventos, .card-eventos-detalle {
+
+    .card-eventos,
+    .card-eventos-detalle {
         img {
             margin: auto;
-            width: 100%;
+            width : 100%;
         }
     }
 }
 
 @media (max-width: 425px) {
     .header-pagina-principal:after {
-        content: "";
-        background: url(/images/grindda_logo_blanco.png) center center no-repeat;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        bottom: 15%;
-        width: 100%;
-        z-index: 1;
+        content        : "";
+        background     : url(/images/grindda_logo_blanco.png) center center no-repeat;
+        height         : 100%;
+        left           : 0;
+        position       : absolute;
+        right          : 0;
+        bottom         : 15%;
+        width          : 100%;
+        z-index        : 1;
         background-size: contain;
     }
 }
@@ -686,41 +1314,47 @@ Footer
     .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item .carousel-card {
         height: 434px;
     }
+
     .carousel-jumbotron {
         .owl-item {
             &:before {
                 background: linear-gradient(90deg, #ffffff 28%, #ffffff5e 60%, #ffffff47 75%);
-                content: "";
-                height: 100%;
-                left: 0;
-                position: absolute;
-                right: 0;
-                width: 100%;
-                z-index: 1;
+                content   : "";
+                height    : 100%;
+                left      : 0;
+                position  : absolute;
+                right     : 0;
+                width     : 100%;
+                z-index   : 1;
             }
         }
     }
+
     .card-eventos {
         height: 330px;
+
         p.block-with-text {
             max-height: 9.7em;
         }
 
         img {
-            height: 100%;
+            height    : 100%;
             object-fit: contain;
         }
     }
+
     .list-footer-mobile {
         margin-bottom: 0;
-        text-align: left;
+        text-align   : left;
     }
+
     .grindda-info {
         display: flex;
-        height: 400px;
+        height : 400px;
         padding: 60px;
     }
 }
+
 @media (max-width: 600px) {
     .carousel-investigadores {
         padding: 0 12px;
