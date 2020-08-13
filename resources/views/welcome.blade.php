@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-<<<<<<< HEAD
-@push('header')
-    <header class="header-pagina-principal" style="background: url({{ Storage::url($fondo->imagen ?? '') }}) center center/cover fixed no-repeat;">
-=======
 @section('content')
 <header class="h-app">
     <div class="owl-carousel owl-header owl-theme">
@@ -25,7 +21,6 @@
         </div>
     </div>
 </header>
->>>>>>> santiago
 
 <section id="about-us">
     <div class="row w-75 mx-auto">

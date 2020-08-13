@@ -14,13 +14,10 @@
 
     <title>{{ config('app.name', 'GRINDDA') }}</title>
 
-<<<<<<< HEAD
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/custom.js') }}" defer></script>
-=======
 
->>>>>>> santiago
     <!-- 2 -->
      @stack('scripts')
 
@@ -56,13 +53,8 @@
                         <li class="nav-item {{ Request::is('proyectos*') ? 'active' : '' }}">
                             <a class="nav-link" href="#">Proyectos</a>
                         </li>
-<<<<<<< HEAD
-                        <li class="nav-item {{ Request::is('semilleros') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('semilleros') }}">Semilleros</a>
-=======
                         <li class="nav-item {{ Request::is('publicaciones*') ? 'active' : '' }}">
                             <a class="nav-link" href="#">Publicaciones</a>
->>>>>>> santiago
                         </li>
                         <li class="nav-item {{ Request::is('eventos*') ? 'active' : '' }}">
                             <a class="nav-link" href="#">Eventos</a>
@@ -70,23 +62,10 @@
                         <li class="nav-item {{ Request::is('equipo*') ? 'active' : '' }}">
                             <a class="nav-link" href="#">Equipo</a>
                         </li>
-<<<<<<< HEAD
-                        <li class="nav-item">
-                            <li class="nav-item {{ Request::is('aplicaciones*') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('aplicaciones') }}">Aplicaciones</a>
-                            </li>
-                        </li>
-                        <li class="nav-item">
-                            <!-- <li class="nav-item {{ Request::is('aplicaciones*') ? 'active' : '' }}"> -->
-                            <li class="">
-                                <a class="nav-link" href="{{ route('contacto') }}">Contactenos</a>
-                            </li>
-=======
                     </ul>
                     <ul class="navbar-nav social-network">
                         <li class="nav-item mt-1">
                             <a class="nav-link facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
->>>>>>> santiago
                         </li>
                         <li class="nav-item mt-1">
                             <a class="nav-link twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
