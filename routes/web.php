@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+
 Auth::routes();
 
 Route::get('/panel', function () {
@@ -22,17 +24,21 @@ Route::get('/', 'PaginaController@index');
 Route::get('/informacion-general', 'PaginaController@informacionGeneral')->name('quienes_somos.informacion_general');
 Route::get('/integrantes', 'PaginaController@integrantes')->name('quienes_somos.integrantes');
 Route::get('/lineas-investigacion', 'PaginaController@lineasInvestigacion')->name('quienes_somos.lineas_investigacion');
+Route::get('/lineas-investigacion/{id}', 'PaginaController@lineasInvestigacionDetalle')->name('quienes_somos.lineas_investigacion_detalle');
 Route::get('/evento/{ano}/{nombreEvento}', 'PaginaController@detallesEvento')->name('paginas.eventos');
 Route::get('/evento/descargar/archivo/{id}', 'PaginaController@descargarArchivo')->name('eventos.descargar_archivo');
 Route::get('/semillero/{nombreSemillero}', 'PaginaController@detallesSemillero')->name('semillero.detalle');
+
+Route::get('/equipo-trabajo', 'PaginaController@equipoTrabajo');
 
 
 Route::get('/semilleros', 'PaginaController@semilleros')->name('semilleros');
 Route::get('/eventos/{ano}', 'PaginaController@eventos')->name('eventos');
 Route::get('/proyectos', 'PaginaController@proyectos')->name('proyectos');
-// Route::get('/publicaciones', 'PaginaController@publicaciones')->name('publicaciones');
-Route::get('/publicaciones/{tipo_publicacion}', 'PaginaController@publicaciones')->name('publicaciones');
-Route::get('/publicacion/{id}/descargar', 'PublicacionController@descargar')->name('publicaciones.descargar');
+Route::get('/proyectos/{id}', 'PaginaController@proyectosDetalle')->name('proyectos-detalle');
+Route::get('/publicaciones', 'PaginaController@publicaciones')->name('publicaciones');
+//Route::get('/publicaciones/{tipo_publicacion}', 'PaginaController@publicaciones')->name('publicaciones');
+//Route::get('/publicacion/{id}/descargar', 'PublicacionController@descargar')->name('publicaciones.descargar');
 
 Route::get('/aplicaciones,', 'PaginaController@aplicaciones')->name('aplicaciones');
 Route::get('blog', 'PaginaController@blog')->name('blog');

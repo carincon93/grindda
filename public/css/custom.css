@@ -1,7 +1,5 @@
-@charset "UTF-8";
-
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);@charset "UTF-8";
 /* Resetear bootstrap */
-
 html {
   height: 100%;
 }
@@ -108,7 +106,6 @@ section.m-250 {
 }
 
 /* create the ... */
-
 .block-with-text:before {
   background: #fff;
   bottom: 0;
@@ -119,7 +116,6 @@ section.m-250 {
 }
 
 /* hide ... if we have text, which is less than or equal to max lines */
-
 .block-with-text:after {
   content: "";
   position: absolute;
@@ -137,11 +133,9 @@ section.m-250 {
 .table {
   table-layout: fixed;
 }
-
 .table.dataTable {
   margin: 0 !important;
 }
-
 .table thead tr th,
 .table thead tr td,
 .table tbody tr th,
@@ -150,14 +144,12 @@ section.m-250 {
 .table tfoot tr td {
   border: 0px;
 }
-
 .table thead tr th,
 .table tbody tr td {
   border-bottom: 1px solid #F0F0F0;
   font-size: 13px;
   vertical-align: middle;
 }
-
 .table thead tr th {
   background: #fafafa;
   border-top: 1px solid #F0F0F0;
@@ -167,7 +159,6 @@ section.m-250 {
 /* ==========================================================================
 Página principal
 ========================================================================== */
-
 .card.bg-gold {
   width: 100%;
   margin: auto;
@@ -184,19 +175,69 @@ Página principal
   font-size: 24px;
   transition: all 0.3s ease;
 }
-
-.navbar-laravel.navbar-pagina .navbar-brand:hover,
-.navbar-laravel.navbar-pagina .navbar-brand:focus {
+.navbar-laravel.navbar-pagina .navbar-brand:hover, .navbar-laravel.navbar-pagina .navbar-brand:focus {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .navbar-laravel.navbar-pagina .navbar-nav .nav-item.active {
   background: #7ab23a;
   border-radius: 42px;
 }
-
-.navbar-laravel.navbar-pagina .navbar-nav .nav-item .nav-link {
+.navbar-laravel.navbar-pagina .navbar-nav .nav-item * {
+  font-family: "Poppins", sans-serif;
+}
+.navbar-laravel.navbar-pagina .navbar-nav .nav-item .navbar.navbar-expand-md {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+.navbar-laravel.navbar-pagina .navbar-nav .nav-item .navbar.navbar-expand-md .nav-item .nav-link {
   color: #fff;
+}
+
+.home section {
+  margin: 250px 0 250px 0;
+}
+.home .home-title {
+  color: #caced8;
+  font-weight: bold;
+}
+.home .owl-header .item {
+  position: relative;
+  height: 710px;
+}
+.home .owl-header .item.item-header .curve-back {
+  bottom: 15px;
+  left: 26px;
+}
+.home .owl-header .item.item-header .curve-back path {
+  fill: #ff944db0;
+}
+.home .owl-header .item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.home .owl-header .item .container,
+.home .owl-header .item .row {
+  height: inherit;
+}
+.home .owl-header .item .row {
+  align-items: center;
+}
+.home .header-item h1 {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+}
+.home .header-item p {
+  color: #fff;
+  text-align: center;
 }
 
 .header-pagina-principal {
@@ -206,7 +247,6 @@ Página principal
   position: relative;
   z-index: 2;
 }
-
 .header-pagina-principal:after {
   content: "";
   background: url(/images/grindda_logo_blanco.png) center center no-repeat;
@@ -231,7 +271,6 @@ Página principal
   width: 100%;
   z-index: 1;
 }
-
 .grindda-info p.text-center {
   font-size: medium;
 }
@@ -253,12 +292,10 @@ Página principal
 .card-publicacion .card-footer {
   background: #fff;
 }
-
 .card-publicacion .card-body {
   min-height: 330px;
   padding: 0;
 }
-
 .card-publicacion .card-body img {
   max-height: 282px;
   -o-object-fit: cover;
@@ -270,14 +307,12 @@ header.jumbotron {
   position: relative;
   overflow: hidden;
 }
-
 header.jumbotron h1 {
   color: white;
   font-weight: bold;
   position: relative;
   z-index: 1;
 }
-
 header.jumbotron:after {
   background-image: linear-gradient(141deg, #e9ecef 38%, #e9ecefc2 51%, #e9ecef47 75%);
   content: "";
@@ -317,7 +352,6 @@ header.jumbotron:after {
 .btn-mas-informacion {
   transition: 0.4s all ease;
 }
-
 .btn-mas-informacion:hover {
   background: #1f74ff;
   border: 2px solid #85cdf7 !important;
@@ -326,8 +360,7 @@ header.jumbotron:after {
 
 /* ==========================================================================
 Panel de administracion
-========================================================================== */
-
+==========================================================================*/
 .navbar-laravel.navbar-panel {
   background: #fff;
 }
@@ -354,12 +387,10 @@ Panel de administracion
   transition: all 0.4s ease;
   width: 25px;
 }
-
 .btn-circle:hover {
   background: #f5f5f5;
   cursor: pointer;
 }
-
 .btn-circle.btn {
   padding: 0;
 }
@@ -373,7 +404,6 @@ Panel de administracion
   border-right: 3px solid #3490dc !important;
   font-weight: 700;
 }
-
 .vs-sidebar--item.active a {
   color: #3490dc !important;
   opacity: 1 !important;
@@ -389,19 +419,16 @@ Panel de administracion
   height: 500px;
   justify-content: center;
 }
-
 .owl-carousel.carousel-investigadores .owl-item.center .card {
   height: 500px;
   opacity: 1;
   padding: 38px;
   width: 100%;
 }
-
 .owl-carousel.carousel-investigadores .owl-item.medium .card {
   height: 420px;
   width: 90%;
 }
-
 .owl-carousel.carousel-investigadores .owl-item .card {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
   height: 370px;
@@ -409,7 +436,6 @@ Panel de administracion
   opacity: 0.4;
   transition: all 0.6s ease;
 }
-
 .owl-carousel.carousel-investigadores .owl-item .card .foto-investigador {
   width: 120px;
 }
@@ -417,22 +443,18 @@ Panel de administracion
 .owl-carousel.carousel-jumbotron {
   height: 450px;
 }
-
 .owl-carousel.carousel-jumbotron .owl-stage-outer {
   height: 450px;
 }
-
 .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item {
   height: inherit;
 }
-
 .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item .carousel-card {
   background: #fff;
   box-shadow: -1px 7px 23px -11px rgba(0, 0, 0, 0.3);
   height: auto;
   padding: 36px;
 }
-
 .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item .carousel-description {
   background: #fff;
   box-shadow: 1px 7px 23px -11px rgba(0, 0, 0, 0.13);
@@ -442,22 +464,18 @@ Panel de administracion
   z-index: 2;
   /* styles for '...' */
 }
-
 .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item .carousel-description .block-with-text {
   max-height: 3.6em;
 }
-
 .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item .carousel-description .block-with-text:before {
   bottom: 4px;
   right: 0;
 }
-
 .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item img {
   height: 353px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .owl-carousel.carousel-jumbotron .owl-nav {
   background: #fff;
   position: absolute;
@@ -465,18 +483,15 @@ Panel de administracion
   top: 447px;
   width: 16%;
 }
-
 .owl-carousel.carousel-jumbotron .owl-nav button:nth-child(1) {
   float: left;
   width: 30%;
 }
-
 .owl-carousel.carousel-jumbotron .owl-nav button:nth-child(2) {
   background-color: #cad7dc;
   float: right;
   width: 70%;
 }
-
 .owl-carousel.carousel-jumbotron .owl-nav button {
   padding: 20px 5px !important;
 }
@@ -484,7 +499,6 @@ Panel de administracion
 /* ==========================================================================
 Form de inicio de sesión
 ========================================================================== */
-
 .wrap-form-signin .form-signin {
   margin: auto;
   padding: 12% 0 0;
@@ -494,7 +508,6 @@ Form de inicio de sesión
 /* ==========================================================================
 Navbar links
 ========================================================================== */
-
 .navbar-links {
   margin-top: 55px;
 }
@@ -502,12 +515,10 @@ Navbar links
 /* ==========================================================================
 Jumbotron eventos
 ========================================================================== */
-
 .jumbotron-eventos {
   background-position-y: -60px;
   background-size: 622px;
 }
-
 .jumbotron-eventos:after {
   width: 100% !important;
   z-index: 0;
@@ -523,18 +534,15 @@ Jumbotron eventos
   height: auto;
   padding-bottom: 35px;
 }
-
 .card-eventos-detalle .col-md-7 p.text-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .card-eventos-detalle article.logros.mostrar-menos {
   height: 600px;
   overflow: hidden;
 }
-
 .card-eventos-detalle article.logros.mostrar-menos:after {
   background: #fff;
   content: "";
@@ -548,42 +556,251 @@ Jumbotron eventos
   bottom: -22px;
   z-index: 0;
 }
-
-.card-eventos-detalle article.logros.mostrar-menos button.show-more {
+.card-eventos-detalle article.logros.mostrar-menos:after #research-seedbeds {
+  position: relative;
+  overflow: hidden;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after #research-seedbeds::before {
+  content: "";
+  background: url(/images/lin-investigacion-trazado.png);
+  position: absolute;
+  left: -70px;
+  top: 180px;
+  width: 403px;
+  height: 1584px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after #research-seedbeds .aviso {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after #research-seedbeds .aviso h1 {
+  margin: 0px !important;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after #research-seedbeds .aviso:before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(45deg, #FF6B09, #FF8FE2);
+  width: 150%;
+  height: 90px;
+  z-index: -1;
+  left: -234px;
+  top: -12px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after #research-seedbeds .aviso .btn.btn-register-seedbed {
+  background: linear-gradient(45deg, #ffffff, #fbfbfb);
+  color: #ff702a;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .h-app .trz1 h6 {
+  width: 500px;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  margin: 150px auto 0px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .h-app .trz1 p {
+  width: 600px;
+  text-align: left;
+  font-size: 15px;
+  color: white;
+  margin: 0 auto;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .logo {
+  height: 100px;
+  width: 100px;
+  background: url(/images/home/traza2.png) no-repeat center;
+  margin: 0 auto;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .logo .sublogo {
+  height: 100px;
+  width: 100px;
+  background: url(/images/home/traza3.png) no-repeat center;
+  margin: 0 auto;
+  padding: 30px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .logo .sublogo .lo {
+  height: 40px;
+  width: 40px;
+  margin: 0px auto;
+  background-size: cover;
+  background-image: url(/images/home/icon.png);
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .card {
+  border: none;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.228);
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .team-item {
+  width: 100%;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .team-item h1 {
+  color: #F95232;
+  font-size: 55px;
+  font-weight: bold;
+  position: relative;
+  width: 44%;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .team-item .name {
+  text-align: right;
+  top: 64px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .team-item .lastname {
+  float: right;
+  top: -54px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .img-team {
+  border-radius: 50%;
+  width: 200px !important;
+  height: 200px;
+  margin: 0px auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.lastname-team {
+  padding-top: 250px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.username-team h1 {
+  text-align: right;
+  margin-left: 280px;
+  font-size: 50px;
+  color: #f95232;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.lastname-team h1 {
+  font-size: 50px;
+  margin-left: -50px;
+  color: #f95232;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after button.btn-contact {
+  border: none;
+  background: linear-gradient(to right, #ff6b09, #ff8fe1b6 150%);
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.owl-equipo div.owl-nav {
+  margin-top: 50px;
+  text-align: center;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.owl-equipo div.owl-nav > button {
+  outline: none !important;
+  box-shadow: 0px 10px 3px whitesmoke !important;
+  border-radius: 50px !important;
+  width: 50px;
+  height: 50px;
+  margin: 0px 25px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after span.border-span {
+  border-bottom: 5px solid #f95232;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.circle {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.04), 5px 5px 6px 2px rgba(0, 0, 0, 0.02), 2px 2px 5px 1px rgba(0, 0, 0, 0.13);
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.circle.azul {
+  background: #5498ff;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.circle.amarillo {
+  background: #fc0;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.circle.naranja {
+  background: #f60;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.circle.verde {
+  background: #3c0;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after div.circle.rojo {
+  background: #f03;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .row-linea {
+  margin-top: 164px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .p-app {
+  color: #525f7f;
+  background: url(/images/home/bg4.png) no-repeat center;
+  background-size: cover;
+  height: 750px;
+  position: relative;
+  bottom: -150px;
+  margin-bottom: 0px;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .p-app .container,
+.card-eventos-detalle article.logros.mostrar-menos:after .p-app .row {
+  height: inherit;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .p-app .img1,
+.card-eventos-detalle article.logros.mostrar-menos:after .p-app .img2 {
+  height: 160px;
+  width: 300px;
+  margin: 20px auto;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .p-app .img1 {
+  background: url(/images/home/img1.png) no-repeat center;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .p-app .img2 {
+  background: url(/images/home/img2.png) no-repeat center;
+}
+.card-eventos-detalle article.logros.mostrar-menos:after .p-app .btn-proy {
+  border: none;
+  background: linear-gradient(to right, #ff6702, #ff9f60) !important;
+}
+.card-eventos-detalle article.logros.mostrar-menos .curve {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+.card-eventos-detalle article.logros.mostrar-menos .curve path {
+  fill: #fff;
+}
+.card-eventos-detalle article.logros.mostrar-menos .social-network li a {
+  padding: 0px !important;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+}
+.card-eventos-detalle article.logros.mostrar-menos .social-network li a:hover {
+  background: #fff;
+  box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.04), 5px 5px 6px 2px rgba(0, 0, 0, 0.02), 2px 2px 5px 1px rgba(0, 0, 0, 0.13);
+}
+.card-eventos-detalle article.logros.mostrar-menos .social-network li button.show-more {
   background: #1f74ff;
   display: block !important;
 }
-
-.card-eventos-detalle article.logros.mostrar-mas {
+.card-eventos-detalle article.logros.mostrar-menos .social-network.mostrar-mas {
   height: auto;
 }
-
-.card-eventos-detalle article.logros.mostrar-mas button.show-more {
-  display: none !important;
+.card-eventos-detalle article.logros.mostrar-menos .social-network.mostrar-mas .flickr:hover {
+  color: #ff0064 !important;
 }
-
-.card-eventos-detalle article.logros button.show-more {
+.card-eventos-detalle article.logros.mostrar-menos .social-network.mostrar-mas .twitter:hover {
+  color: #08a0e9 !important;
+}
+.card-eventos-detalle article.logros.mostrar-menos .social-network.mostrar-mas button.show-more {
   bottom: 0;
   left: 0;
   position: absolute;
   right: 0;
   z-index: 2;
 }
-
-.evento-fecha {
+.card-eventos-detalle article.logros.mostrar-menos .evento-fecha {
   background: #1f74ff;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.07), 1px 2px 5px 0 rgba(0, 0, 0, 0.06);
   color: #fff;
   font-size: medium;
   padding: 7px;
 }
-
-.substring {
+.card-eventos-detalle article.logros.mostrar-menos .substring {
   font-size: 100%;
   text-transform: capitalize;
 }
-
-.enlace-archivo {
+.card-eventos-detalle article.logros.mostrar-menos .enlace-archivo {
   display: block;
   background: #f7f7f7;
   border-radius: 9px;
@@ -595,10 +812,9 @@ Jumbotron eventos
   text-decoration: none;
 }
 
-/* ==========================================================================
+/* ========================================================================== 
 Publicaciones
 ========================================================================== */
-
 .jumbotron-publicaciones {
   width: 100%;
   height: 400px !important;
@@ -611,16 +827,13 @@ Publicaciones
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .card-publicaciones h1 {
   color: #707070 !important;
 }
-
 .card-publicaciones .block-with-text {
   margin-top: 100px;
   max-height: 9.5em;
 }
-
 .card-publicaciones .btn-publicaciones {
   background: linear-gradient(to right, #ff6b09, #ff8fe2);
   position: relative;
@@ -638,7 +851,6 @@ Publicaciones
 /* ==========================================================================
 Footer
 ========================================================================== */
-
 .color-facebook {
   color: #3B5998;
 }
@@ -666,13 +878,68 @@ Footer
   padding-bottom: 55px;
   padding-top: 75px;
 }
-
-.footer-pages .text-footer {
-  margin-top: 100px;
+.footer-pages .facebook:hover {
+  color: #3b5997 !important;
+}
+.footer-pages .instagram:hover {
+  color: #dd2a7b !important;
 }
 
-.footer-pages .footer-desc {
-  color: #a9a9a9;
+footer {
+  height: 550px;
+  position: relative;
+  background: url(/images/footer.png) no-repeat center;
+  background-size: cover;
+  background-position: bottom;
+}
+footer .container,
+footer div:nth-child(1) {
+  height: 100%;
+}
+footer div:nth-child(1) {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer figure {
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 10rem;
+}
+footer .social-network {
+  width: 250px;
+  justify-content: space-around;
+  flex: 1.4;
+}
+
+@media (min-width: 1200px) {
+  .container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container {
+    max-width: 960px;
+  }
+}
+.owl-news > .owl-nav > button {
+  position: absolute;
+  box-shadow: 0px 0px 3px gray;
+  outline: none;
+  width: 25px;
+  background: white !important;
+  border-radius: 50%;
+}
+
+.owl-news > .owl-nav > button.owl-prev {
+  top: 200px;
+  left: 50px;
+}
+
+.owl-news > .owl-nav > button.owl-next {
+  top: 200px;
+  right: 50px;
 }
 
 .mini-footer {
@@ -693,15 +960,34 @@ Footer
   padding: 25px 0;
   border-top: 1px solid rgba(122, 137, 148, 0.07);
 }
-
-.company {
-  color: #74b848;
+.copyright .owl-semilleros > .owl-nav {
+  text-align: center;
+}
+.copyright .owl-semilleros > .owl-nav > button {
+  outline: none;
+  box-shadow: 0px 0px 55px gray;
+  margin: 80px 20px;
+  width: 25px;
+  border-radius: 50%;
+}
+.copyright header.header-eventos {
+  height: 700px;
+  background: url(/images/headerEventos.jpg) no-repeat top;
+  background-size: cover;
+}
+.copyright .owl-eventos > .owl-nav > button {
+  position: absolute;
+  box-shadow: 0px 0px 3px gray;
+  outline: none;
+  height: 35px;
+  width: 35px;
+  background: white !important;
+  border-radius: 50%;
 }
 
 /* ==========================================================================
 Semillero
 ========================================================================== */
-
 .img-location {
   margin-top: -70px !important;
 }
@@ -728,11 +1014,9 @@ h1.title-location {
 /* ==========================================================================
 Semillero
 ========================================================================== */
-
 /* ==========================================================================
 Semillero
 ========================================================================== */
-
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -912,7 +1196,6 @@ section.gallery {
 }
 
 /* Trazados de lineas */
-
 div.first-line {
   background: url(/images/first-line.png) no-repeat center;
   width: 100%;
@@ -1089,11 +1372,9 @@ div.join-images {
 /* ==========================================================================
 Semillero
 ========================================================================== */
-
 /* ==========================================================================
 Aplicaciones
 ========================================================================== */
-
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -1167,11 +1448,9 @@ Aplicaciones
 /* ==========================================================================
 Aplicaciones
 ========================================================================== */
-
 /* ==========================================================================
 Blog
 ========================================================================== */
-
 div.portada1 {
   background-image: url(/public/storage/blog/recursos_blog/portada1.jpg) no-repeat center !important;
   background-size: cover;
@@ -1199,19 +1478,16 @@ div.portada1 {
 /* ==========================================================================
 /Blog
 ========================================================================== */
-
 @media (max-width: 991px) {
   .login-dropdown {
     display: none;
   }
 }
-
 @media (min-width: 767px) and (max-width: 991px) {
   .card.bg-gold > h1 {
     font-size: 28px;
   }
 }
-
 @media (max-width: 767px) {
   .grindda-info .container {
     margin-top: 200px !important;
@@ -1252,12 +1528,11 @@ div.portada1 {
   }
 
   .card-eventos img,
-  .card-eventos-detalle img {
+.card-eventos-detalle img {
     margin: auto;
     width: 100%;
   }
 }
-
 @media (max-width: 425px) {
   .header-pagina-principal:after {
     content: "";
@@ -1272,7 +1547,6 @@ div.portada1 {
     background-size: contain;
   }
 }
-
 @media (min-width: 768px) {
   .owl-carousel.carousel-jumbotron .owl-stage-outer .owl-item .carousel-card {
     height: 434px;
@@ -1292,11 +1566,9 @@ div.portada1 {
   .card-eventos {
     height: 330px;
   }
-
   .card-eventos p.block-with-text {
     max-height: 9.7em;
   }
-
   .card-eventos img {
     height: 100%;
     -o-object-fit: contain;
@@ -1314,10 +1586,69 @@ div.portada1 {
     padding: 60px;
   }
 }
-
 @media (max-width: 600px) {
   .carousel-investigadores {
     padding: 0 12px;
   }
-}
 
+  .owl-eventos > .owl-nav > button.owl-prev {
+    top: 325px;
+    left: 30px;
+  }
+
+  .owl-eventos > .owl-nav > button.owl-next {
+    top: 325px;
+    right: 30px;
+  }
+
+  div#bg {
+    background: rgba(0, 0, 0, 0.228);
+    width: 100%;
+    height: 700px;
+  }
+
+  .owl-galeria-eventos > .owl-nav {
+    width: 100px;
+    margin: 20px auto;
+    align-items: center;
+  }
+
+  .owl-galeria-eventos > .owl-nav > button {
+    margin: 0px 14px;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.589);
+    border-radius: 50px;
+  }
+
+  .owl-proyectos > .owl-nav {
+    width: 100px;
+    margin: 20px auto;
+    align-items: center;
+  }
+
+  .owl-proyectos > .owl-nav > button {
+    margin: 0px 14px;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.589);
+    border-radius: 50px;
+  }
+
+  .owl-galeria-proyectos > .owl-nav {
+    width: 100px;
+    margin: 20px auto;
+    align-items: center;
+  }
+
+  .owl-galeria-proyectos > .owl-nav > button {
+    margin: 0px 14px;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.589);
+    border-radius: 50px;
+  }
+}

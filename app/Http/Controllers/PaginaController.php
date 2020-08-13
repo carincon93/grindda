@@ -46,8 +46,14 @@ class PaginaController extends Controller
     public function lineasInvestigacion()
     {
         $lineasInvestigacion = LineaInvestigacion::orderBy('nombre')->get();
-
+        // return response()->json($lineasInvestigacion);
         return view('pagina.quienes_somos.lineas_investigacion', compact('lineasInvestigacion'));
+    }
+    public function lineasInvestigacionDetalle($id)
+    {
+        $lineaInvestigacion = LineaInvestigacion::findOrFail($id);
+        // return response()->json($lineaInvestigacion);
+        return view('pagina.quienes_somos.lineas_investigacion_detalle', compact('lineaInvestigacion'));
     }
 
     public function semilleros()
@@ -75,14 +81,13 @@ class PaginaController extends Controller
     public function eventos($ano)
     {
         $eventos = Evento::whereRaw("YEAR(eventos.fechaFin) = {$ano}")->get();
-
+        // return response()->json($eventos);
         return view('pagina.eventos.listar', compact('eventos'));
     }
 
     public function detallesEvento($ano, $nombreEvento)
     {
-        $evento = Evento::where('nombreEvento', str_replace('-', ' ', $nombreEvento))->where('ano', $ano)->firstOrFail();
-
+        $evento = Evento::where('nombreEvento', str_replace('%20', ' ', $nombreEvento))->where('ano', $ano)->firstOrFail();
         return view('pagina.eventos.ver', compact('evento'));
     }
 
@@ -112,15 +117,21 @@ class PaginaController extends Controller
     public function proyectos()
     {
         $proyectos = Proyecto::orderBy('nombre')->get();
-
+        // return response()->json($proyectos);
         return view('pagina.proyectos', compact('proyectos'));
     }
-
-    public function publicaciones($tipo_publicacion)
+    public function proyectosDetalle($id)
     {
-        $publicaciones = Publicacion::orderBy('nombre')->where('tipo_publicacion', $tipo_publicacion)->get();
+        $proyecto = Proyecto::findOrFail($id);
+        // return response()->json($proyecto);
+        return view('pagina.proyectos_detalle', compact('proyecto'));
+    }
 
-        return view('pagina.publicaciones', compact('publicaciones', 'tipo_publicacion'));
+    public function publicaciones()
+    {
+        $publicaciones = Publicacion::orderBy('nombre')->get();
+        // return response()->json($publicaciones);
+        return view('pagina.publicaciones', compact('publicaciones'));
     }
 
     /**
@@ -160,10 +171,17 @@ class PaginaController extends Controller
 
         return redirect()->route('fondos.index');
     }
+
     public function contacto(){
         return view('pagina.contacto.contacto');
     }
+
     public function blog(){
         return view('pagina.blog.blog');
+    }
+    
+    public function equipoTrabajo()
+    {
+        return view('equipo_trabajo.listar');
     }
 }

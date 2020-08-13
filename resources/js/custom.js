@@ -42,19 +42,139 @@ $(document).ready(function() {
         }
     });
 
-    var carouselJumbotron = $('.carousel-jumbotron');
-    carouselJumbotron.owlCarousel({
-        items: 1,
-        loop: true,
-        responsiveClass:true,
-        autoplay: false,
-        autoplayHoverPause: true,
-        nav: false,
-        navText: ["<i class='fa-fw fa fa-chevron-left'></i>", "<strong>Siguiente</strong> <i class='fa-fw fa fa-chevron-right'></i>"],
-        navSpeed: 3000,
+    $('.owl-header').owlCarousel({
+        center:true,
+        loop:true,
+        margin:10,
+        nav:true,
+        navText:['<', '>'],
+        autoplay:true,
+        autoplayTimeout: 10000,
         mouseDrag: false,
+        dots:true,
+        responsive:{
+            0:{
+                items:1
+            }
+        }
     });
 
+
+    $('.owl-equipo').owlCarousel({
+        center:true,
+        loop:true,
+        margin:10,
+        nav:false,
+        navText:['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+        autoplay:true,
+        autoplayTimeout:5000,
+        mouseDrag:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            2000:{
+                items:3
+            },
+            3000:{
+                items:5
+            }
+        }
+    });
+    $('.owl-equipo .owl-nav').removeClass('disabled');
+
+    $('.owl-semillero').owlCarousel({
+        center:true,
+        loop:true,
+        margin:10,
+        nav:true,
+        navText:"<>",
+        responsive:{
+            0:{
+                items:1
+            },
+            1000:{
+                items:3
+            },
+            3000:{
+                items:5
+            }
+        }
+    });
+    $('.owl-news').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            2000:{
+                items:3
+            },
+            3000:{
+                items:5
+            }
+        }
+    })
+    $('.owl-semilleros').owlCarousel({
+        loop:true,
+        margin:100,
+        nav:true,
+        navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+        center:true,
+        responsive:{
+            0:{
+                items:3
+            },
+        }
+    })
+    $('.owl-eventos').owlCarousel({
+        loop:true,
+        margin:100,
+        nav:true,
+        navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+        center:true,
+        responsive:{
+            0:{
+                items:1
+            },
+        }
+    })
+    $('.owl-galeria-eventos').owlCarousel({
+        loop:true,
+        nav:true,
+        navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+        center:true,
+        responsive:{
+            0:{
+                items:3
+            },
+        }
+    })
+    $('.owl-galeria-proyectos').owlCarousel({
+        loop:true,
+        nav:true,
+        navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+        center:true,
+        responsive:{
+            0:{
+                items:3
+            },
+        }
+    })
+    $('.owl-proyectos').owlCarousel({
+        loop:true,
+        nav:true,
+        margin:10,
+        navText: ['<i class="fas fa-arrow-left text-muted"></i>', '<i class="fas fa-arrow-right text-muted"></i>'],
+        center:true,
+        responsive:{
+            0:{
+                items:3
+            },
+        }
+    })
     $('.carousel-investigadores').owlCarousel({
         center: true,
         items: 5,
@@ -78,16 +198,6 @@ $(document).ready(function() {
             }
         }
     });
-
-    // $('.carousel-investigadores').on('translate.owl.carousel', function(e){
-    //     idx = e.item.index;
-    //     $('.owl-item.big').removeClass('big');
-    //     $('.owl-item.medium').removeClass('medium');
-    //     $('.owl-item').eq(idx).addClass('big');
-    //     $('.owl-item').eq(idx-1).addClass('medium');
-    //     $('.owl-item').eq(idx+1).addClass('medium');
-    // });
-
 });
 
 const itemAnimated = document.querySelectorAll('.animated');

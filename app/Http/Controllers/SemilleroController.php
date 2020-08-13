@@ -82,10 +82,8 @@ class SemilleroController extends Controller
      */
     public function show($id)
     {
-        // $semillero = Semillero::findOrFail($id);
-        //
-        // return view('semilleros.ver', compact('semillero'));
-        return redirect()->back();
+        $semillero = Semillero::findOrFail($id);
+        return view('semilleros.detalle', compact('semillero'));
     }
 
     /**

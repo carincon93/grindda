@@ -6,6 +6,7 @@
  */
 require('./bootstrap');
 require('owl.carousel');
+require('@fortawesome/fontawesome-free/js/all');
 
 window.Vue      = require('vue');
 window.Vuesax   = require('vuesax');
