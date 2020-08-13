@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @push('header')
-    <header class="header-pagina-principal" style="background: url({{ Storage::url($fondo->imagen) }}) center center/cover fixed no-repeat;">
+    <header class="header-pagina-principal" style="background: url({{ Storage::url($fondo->imagen ?? '') }}) center center/cover fixed no-repeat;">
 
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 1 0.5">
